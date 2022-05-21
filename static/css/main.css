@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+a{
+  text-decoration: none;
+}
 
 body {
     background: url("../img/bg-4.jpg");
@@ -71,4 +74,89 @@ body {
     margin-right: 20px;
 }
 
+.register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vw;
+  height: 650px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.396);
+}
+
+.resiger_block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(18, 17, 17, 0.597);
+  width: 500px;
+  height: 500px;
+}
+
+.resiger_block input {
+  outline: none;
+  border: none;
+  background: none;
+  border-bottom: 2px solid #8f1698;
+  margin: 20px 20px;
+  height: 50px;
+  color: #fff;
+}
+
+.resiger_block input::placeholder{
+  color: rgb(219, 212, 212);
+} 
+
+.resiger_block input:focus{
+  color: #8f1698;
+}
+
+.status-password {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.status-password input {
+  width: 20px;
+  height: 20px;
+}
+.status-password label {
+  color: #fff;
+}
+
+.register-link {
+  border-bottom: 2px solid #8f1698;
+  padding: 20px;
+}
+
+.question-link {
+  text-align: center;
+  color: #fff;
+}
+
+.login-link {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 10px;
+
+}
+
+.register-link {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.register-none {
+  display: none;
+}
+
+
+.block_hide {
+  display: none;
+}
 /* #811b8d */
