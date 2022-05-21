@@ -7,7 +7,7 @@ a{
 }
 
 body {
-    background: url("../img/bg-4.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.61)), url("../img/bg-4.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     box-sizing: border-box;
@@ -160,3 +160,188 @@ body {
   display: none;
 }
 /* #811b8d */
+
+/* Singer info section */
+#singer_info {
+    min-width: 100vw;
+    min-height: 82.4vh;
+    background: rgba(0, 0, 0, 0.349);
+}
+
+.singer_about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.music_about {
+    height: 541px;
+    width: 40%;
+    border-right: 5px solid #8f1698;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mp3_content {
+    width: 90%;
+    height: 55%;
+    border-bottom: 5px solid #8f1698;
+    padding: 1rem;
+    position: relative;
+}
+
+.mp3_ct {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mp3_ct_about {
+    color: #fff;
+    font-family: system-ui;
+    margin: 5px;
+}
+
+.mp3_ct img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+}
+
+.mp3_btn {
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: system-ui;
+}
+
+.play_btn {
+    background: #190f3b;
+    color: #fff;
+    transition: .2s;
+    border: 1px solid #fff;
+}
+
+.play_btn:hover {
+    color: #b311be;
+    background: #180f35;
+    transition: .2s;
+    border: 1px solid #8f1698;
+}
+
+.mp3_buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 40px;
+    width: 440px;
+}
+
+.download_btn {
+    background: #b311be;
+    color: #fff;
+    transition: .2s;
+    border: 1px solid #fff;
+    position: relative;
+}
+
+.download_btn:hover {
+    color: #261461;
+    background: #8f1698;
+    transition: .2s;
+    border: 1px solid #261461;
+}
+
+.music_album {
+    width: 100%;
+    height: 45%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.music_list {
+    height: 541px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper {
+    overflow: hidden;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    transform: translateX(0);
+}
+
+.wrapper a {
+    transform: translateX(0px);
+}
+
+.wrapper a img {
+    width: 200px;
+    height: 150px;
+    margin: 0 5px 0 0;
+    border: 2px solid #fff;
+}
+
+.wrapper_btn {
+    position: absolute;
+    top: 45%;
+    left: 22px;
+}
+
+.wrapper_btn i {
+    font-size: 35px;
+    color: #8f1698;
+    cursor: pointer;
+}
+
+.wrapper_btn i:last-child {
+    position: absolute;
+    right: -460px;
+}
+
+.music_list_ul {
+    width: 95%;
+    height: 60px;
+    border-bottom: 5px solid #b311be;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.music_list_ul ul {
+    display: flex;
+}
+
+.music_list_ul ul li {
+    margin: 0 30px;
+    list-style: none;
+}
+.music_list_ul ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+/* Singer info section end */
+
+
+.music_control {
+    width: 100%;
+    height: 60.5px;
+    border-top: 5px solid #8f1698;
+    background: #180f35;
+}
+>>>>>>> bf4987c80a075b8316b5dfd56f434647c1b16737
