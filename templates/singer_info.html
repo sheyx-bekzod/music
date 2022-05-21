@@ -6,34 +6,103 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Singer Info</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- Font-awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Style -->
     <link rel="stylesheet" href="../static/css/main.css">
 </head>
 
 <body>
 
+    <div class="header-wrapper">
+        <header class="header container">
+            <div class="logo">
+                <h1 class="logog-header">Music Word </h1>
+                <i class="fa-solid fa-music"></i>
+            </div>
+
+            <div class="search">
+                <input type="text" placeholder="Search musics">
+                <!-- search icon  -->
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li>favaurte</li>
+                    <i class="fa fastar"></i>
+                    <li>Login</li>
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
 
     <section id="singer_info">
-        <div class="container">
-            <div class="singer_about">
-                
-                <!-- music about -->
-                <div class="music_about">
+        <div class="singer_about">
+
+            <!-- music about -->
+            <div class="music_about">
+
+                <div class="mp3_content">
+                    <div class="mp3_ct">
+                        <div>
+                            <p class="mp3_ct_about">Jsper Kyd</p>
+                            <p class="mp3_ct_about">Ezio's fomily</p>
+                            <p class="mp3_ct_about">2022-05-22</p>
+                        </div>
+                        <img src="../static/img/merc.jpg" alt="">
+                    </div>
+
+                    <div class="mp3_buttons">
+                        <a class="play_btn mp3_btn" href="#">Play Online</a>
+                        <a class="download_btn mp3_btn" href="#">Download</a>
+                    </div>
+                </div>
+
+                <div class="music_album">
+
+                    <div class="wrapper">
+                        <a class="wrapper_img" href="#"><img src="../static/img/merc.jpg" alt=""></a>
+                        <a class="wrapper_img" href="#"><img src="../static/img/bg-1.jpg" alt=""></a>
+                        <a class="wrapper_img" href="#"><img src="../static/img/bg-3.jpg" alt=""></a>
+                    </div>
+
+                    <div class="wrapper_btn">
+                        <i class="fa-solid leftBtn fa-circle-chevron-left"></i>
+                        <i class="fa-solid rightBtn fa-circle-chevron-right"></i>
+                    </div>
 
                 </div>
-                <!-- music about end -->
-
-
-
-                <!-- music list -->
-                <div class="music_list">
-
-                </div>
-                <!-- music list end -->
 
             </div>
+            <!-- music about end -->
+
+
+
+            <!-- music list -->
+            <div class="music_list">
+
+
+                <div class="music_list_ul">
+                    <ul>
+                        <li><a href="#">New Musics</a></li>
+                        <li><a href="">Popular Musics</a></li>
+                        <li><a href="">Lorem</a></li>
+                        <li><a href="">Ipsum</a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+            <!-- music list end -->
+
         </div>
     </section>
 
