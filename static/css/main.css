@@ -1,0 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: url("../img/bg-4.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+}
