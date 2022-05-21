@@ -19,6 +19,10 @@ body {
     height: 50px;
 }
 
+.header-wrapper {
+    background-color: #180f35;
+    border-bottom: 5px solid #8f1698;
+}
 
 .logo {
     display: flex;
