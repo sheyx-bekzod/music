@@ -63,19 +63,62 @@ function changeImage() {
   }
   // 
   wrapper_album.forEach(item => {
-    item.style.transform = `translateX(${-index * 200}px)`
+    item.style.transform = `translateX(${-index * 205}px)`
   });
 }
 
-rightBtn.addEventListener('click', function change() {
-  index++;
-  changeImage()
-});
+if (rightBtn){
+  rightBtn.addEventListener('click', function change() {
+    index++;
+    changeImage()
+  });
+}
 
-leftBtn.addEventListener('click', function change() {
-  index--;
-  changeImage()
-});
+if (leftBtn) {
+  leftBtn.addEventListener('click', function change() {
+    index--;
+    changeImage()
+  });
+}
 
 
+const typeMusic = document.querySelectorAll(".song_type h2"),
+    activeIcon = document.querySelectorAll('.song_type i'),
+    popularMusicList = document.querySelectorAll('.popular_music_list')
+ 
 
+    typeMusic.forEach((item,index) => {
+      item.addEventListener("click",() => {
+        openInfo(index)
+      })
+    })
+
+    typeMusic.forEach((item,index) => {
+        item.addEventListener("mouseenter",() => {
+          activeHeader(index)
+        })
+    })
+
+    function activeHeader(index){
+
+      console.log(popularMusicList[index].style.display === "none")
+      if(popularMusicList[index].style.display !== "none"){
+        typeMusic[index].style.cursor = 'pointer'
+      }
+    }
+
+    activeIcon.forEach((item,index) => {
+      item.addEventListener("click",() => {
+          closeInfo(index)
+      })
+    })
+
+    function closeInfo(index){
+      activeIcon[index].classList.remove("fa-angle-down")
+      popularMusicList[index].style.display = "none"
+    }
+
+    function openInfo(index){
+      activeIcon[index].classList.add("fa-angle-down")
+      popularMusicList[index].style.display = "block"
+    }
