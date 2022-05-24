@@ -63,7 +63,7 @@ function changeImage() {
   }
   // 
   wrapper_album.forEach(item => {
-    item.style.transform = `translateX(${-index * 200}px)`
+    item.style.transform = `translateX(${-index * 205}px)`
   });
 }
 
@@ -77,5 +77,13 @@ leftBtn.addEventListener('click', function change() {
   changeImage()
 });
 
+
+// pause,play btn
+const play = document.querySelectorAll('.p_btn');
+
+play.addEventListener('click', () => {
+  plyBtn.classList.remove(fa-circle-play)
+  plyBtn.classList.add(fa-circle-pause)
+});
 
 
