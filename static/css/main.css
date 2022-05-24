@@ -348,3 +348,7 @@ body {
     border-top: 5px solid #8f1698;
     background: #180f35;
 }
+
+.wrapper_img {
+    transition: ease-in-out 0.5s;
+}

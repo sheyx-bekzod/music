@@ -55,13 +55,16 @@ const wrapper = document.querySelector('.wrapper'),
 let index = 0;
 
 function changeImage() {
-  if (index > wrapper_album.length - 1) {
+  if (index > wrapper_album.length - 2) {
     index = 0
   }
   else if (index < 0) {
-    index = wrapper_album.length - 1;
+    index = wrapper_album.length - 2;
   }
-  wrapper.style.transform = `translateX(${-index * 100}px)`
+  // 
+  wrapper_album.forEach(item => {
+    item.style.transform = `translateX(${-index * 200}px)`
+  });
 }
 
 rightBtn.addEventListener('click', function change() {
