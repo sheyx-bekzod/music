@@ -15,7 +15,6 @@ if (login) {
 function openModal() {
   setTimeout(() => {
     registerWind.classList.remove('register-none')
-    registerWind.style.transition = 'easy-in 2.5s'
   }, 1000);
 }
 
