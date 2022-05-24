@@ -2,8 +2,9 @@
     margin: 0;
     padding: 0;
 }
-a{
-  text-decoration: none;
+
+a {
+    text-decoration: none;
 }
 
 body {
@@ -75,90 +76,93 @@ body {
 }
 
 .register {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vw;
-  height: 650px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.396);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vw;
+    height: 650px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.396);
 }
 
 .resiger_block {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: rgba(18, 17, 17, 0.597);
-  width: 500px;
-  height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(18, 17, 17, 0.597);
+    width: 500px;
+    height: 500px;
 }
 
 .resiger_block input {
-  outline: none;
-  border: none;
-  background: none;
-  border-bottom: 2px solid #8f1698;
-  margin: 20px 20px;
-  height: 50px;
-  color: #fff;
+    outline: none;
+    border: none;
+    background: none;
+    border-bottom: 2px solid #8f1698;
+    margin: 20px 20px;
+    height: 50px;
+    color: #fff;
 }
 
-.resiger_block input::placeholder{
-  color: rgb(219, 212, 212);
-} 
+.resiger_block input::placeholder {
+    color: rgb(219, 212, 212);
+}
 
-.resiger_block input:focus{
-  color: #8f1698;
+.resiger_block input:focus {
+    color: #8f1698;
 }
 
 .status-password {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .status-password input {
-  width: 20px;
-  height: 20px;
+    width: 20px;
+    height: 20px;
 }
+
 .status-password label {
-  color: #fff;
+    color: #fff;
 }
 
 .register-link {
-  border-bottom: 2px solid #8f1698;
-  padding: 20px;
+    border-bottom: 2px solid #8f1698;
+    padding: 20px;
 }
 
 .question-link {
-  text-align: center;
-  color: #fff;
+    text-align: center;
+    color: #fff;
 }
 
 .login-link {
-  text-align: center;
-  color: #fff;
-  margin-bottom: 10px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 10px;
 
 }
 
 .register-link {
-  text-align: center;
-  color: #fff;
-  margin-bottom: 10px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 10px;
 }
 
 .register-none {
-  display: none;
+    display: none;
 }
 
 
 .block_hide {
-  display: none;
+    display: none;
 }
+
 /* #811b8d */
 
 /* Singer info section */
@@ -282,9 +286,6 @@ body {
     transform: translateX(0);
 }
 
-.wrapper a {
-    transform: translateX(0px);
-}
 
 .wrapper a img {
     width: 200px;
@@ -310,6 +311,8 @@ body {
     right: -460px;
 }
 
+
+
 .music_list_ul {
     width: 95%;
     height: 60px;
@@ -329,6 +332,7 @@ body {
     margin: 0 30px;
     list-style: none;
 }
+
 .music_list_ul ul li a {
     text-decoration: none;
     color: #fff;
@@ -344,4 +348,3 @@ body {
     border-top: 5px solid #8f1698;
     background: #180f35;
 }
->>>>>>> bf4987c80a075b8316b5dfd56f434647c1b16737
