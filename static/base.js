@@ -129,3 +129,31 @@ function openInfo(index) {
   activeIcon[index].classList.add("fa-angle-down")
   popularMusicList[index].style.display = "block"
 }
+
+
+// MUSIC
+const musics = []
+
+
+
+const playBtn = document.querySelectorAll(".play")
+const audio = document.querySelectorAll(".user_music_box audio")
+
+audio.forEach(element => {
+  musics.push(element.src)
+});
+
+console.log(musics);
+
+// console.log(song);
+
+// fa-circle-pause
+// fa-circle-pause
+
+function playAudio(index){
+  
+}
+
+
+
+
