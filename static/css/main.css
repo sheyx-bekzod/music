@@ -463,18 +463,26 @@ a{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    overflow: hidden;
 }
 
 .singer-box {
     background-color: #180f35;
     color: #fff;
     height: 205px;
-    width: 205x;
+    width: 205px;
     border: 3px #fff solid;
 }
 
+.singer-box:hover:singer-box img{
+    position: relative;
+    top: 200%;
+    transition: ease-in 0.5s;
+}
+
 .singer-box img {
-    display: inline;
+    position: relative;
+    /* top: 200%; */
 }
 
 
@@ -484,8 +492,10 @@ a{
     align-items: center;
     height: 100%;
     width: 100%;
-    display: none;
+    position: relative;
+    top: -200%;
 }
+
 .singer-box-info ul {
     display: flex;
     flex-direction: column;

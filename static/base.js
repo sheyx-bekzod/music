@@ -81,8 +81,6 @@ if (leftBtn) {
   });
 }
 
-
-
 const typeMusic = document.querySelectorAll(".song_type h2"),
   activeIcon = document.querySelectorAll('.song_type i'),
   popularMusicList = document.querySelectorAll('.popular_music_list')
@@ -122,3 +120,69 @@ function openInfo(index) {
   activeIcon[index].classList.add("fa-angle-down")
   popularMusicList[index].style.display = "block"
 }
+
+
+// MUSIC
+const musics = []
+
+const playBtn = document.querySelectorAll(".play")
+const audio = document.querySelectorAll(".user_music_box audio")
+const mainMusicBar = document.querySelector('.main-music')
+
+const musicImg = document.querySelectorAll(".user_music_box img")
+const mp3Name = document.querySelectorAll(".mp3_name p")
+const mp3Owner = document.querySelectorAll(".mp3_name a")
+
+
+
+const mp3Ct = document.querySelector(".mp3_ct img")
+const mp3CtaAbout = document.querySelectorAll('.mp3_ct_about')
+
+console.log(mp3CtaAbout);
+
+
+
+let musicStatus = ""
+
+
+audio.forEach(element => {
+  musics.push(element.src)
+});
+
+function playIcon(){}
+playBtn.forEach(item => {
+  item.addEventListener("click", () => {
+    item.classList.toggle('fa-circle-play')
+    item.classList.toggle('fa-circle-pause')
+  })
+})
+
+
+playBtn.forEach((item,index) => {
+  item.addEventListener("click", () => {
+    if (mainMusicBar.src !== musics[index]){
+      musicStatus = musics[index]
+      mainMusicBar.src = musicStatus
+    }
+    if (mainMusicBar.paused) {
+      item.classList.add('fa-circle-pause')
+      setMusicPage(index)
+      mainMusicBar.play(musics[index])
+    }else{
+      item.classList.add('fa-circle-play')
+      mainMusicBar.pause()
+    }
+  })
+})
+
+function setMusicPage(index){
+  const img = musicImg[index].src
+  const owner = mp3Owner[index]
+  const name = mp3Name[index]
+
+  mp3Ct.src = img
+  mp3CtaAbout[0].innerHTML = owner.textContent
+  mp3CtaAbout[1].innerHTML = name.textContent
+}
+
+
