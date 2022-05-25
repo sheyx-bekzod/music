@@ -18,10 +18,10 @@
 </head>
 
 <body>
-
+<!-- 
     <div class="preloader">
         <img src="https://i.gifer.com/QXjw.gif" alt="">
-    </div>
+    </div> -->
 
     <div class="header-wrapper">
         <header class="header container">
@@ -117,7 +117,7 @@
                     </div>
                     <div class="user_music_box">
                         <!-- <i class="fa-solid pause fa-circle-pause"></i> -->
-                        <i class="fa-solid p_btn play fa-circle-play" ></i>
+                        <i class="fa-solid p_btn play fa-circle-play"></i>
                         <audio src="../static/audio/2.m4a" hidden></audio>
                         <img src="../static/img/bg-3.jpg" alt="">
                         <div class="mp3_name">
@@ -149,6 +149,34 @@
 
     <!-- music control -->
     <div class="music_control">
+        <div class="control_btn">
+            <i class="fa-solid ctrl_btn fa-circle-chevron-left"></i>
+            <i class="fa-solid p_btn play fa-circle-play"></i>
+            <i class="fa-solid ctrl_btn2 fa-circle-chevron-right"></i>
+        </div>
+
+        <div class="colmn">
+            <div class="progress_mp3_name">
+                <p class="animate_text">Jsper Kyd: Ezio's fomily</p>
+                <p class="artist_name">03:42</p>
+            </div>
+            <div class="progress_container">
+                <div class="progres">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="ctrl_buttons">
+            <i class="fa-solid fa-share"></i>
+            <i class="fa-solid fa-star"></i>
+
+            <div class="mp3_sound_controll">
+                <i class="fa-solid fa-volume-high"></i>
+                <input type="range" min="1" max="100" value="20" class="slider">
+            </div>
+
+        </div>
 
     </div>
     <!-- music control end -->
