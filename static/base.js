@@ -150,14 +150,6 @@ window.addEventListener('load',() => {
     musics.push(element.src)
   });
 
-  // function playIcon(){}
-  // playBtn.forEach(item => {
-  //   item.addEventListener("click", () => {
-  //     item.classList.toggle('fa-circle-play')
-  //     item.classList.toggle('fa-circle-pause')
-  //   })
-  // })
-
 
   playBtn.forEach((item,index) => {
     item.addEventListener("click", () => {
