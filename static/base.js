@@ -82,29 +82,22 @@ if (leftBtn) {
 }
 
 
-// pause,play btn
-// const play = document.querySelectorAll('.p_btn');
-
-// play.addEventListener('click', () => {
-//   plyBtn.classList.remove(fa - circle - play)
-//   plyBtn.classList.add(fa - circle - pause)
-// });
 
 const typeMusic = document.querySelectorAll(".song_type h2"),
   activeIcon = document.querySelectorAll('.song_type i'),
   popularMusicList = document.querySelectorAll('.popular_music_list')
 
-  typeMusic.forEach((item, index) => {
-    item.addEventListener("click", () => {
-      openInfo(index)
-    })
+typeMusic.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    openInfo(index)
   })
+})
 
-  typeMusic.forEach((item, index) => {
-    item.addEventListener("mouseenter", () => {
-      activeHeader(index)
-    })
+typeMusic.forEach((item, index) => {
+  item.addEventListener("mouseenter", () => {
+    activeHeader(index)
   })
+})
 
 
 function activeHeader(index) {
@@ -113,11 +106,11 @@ function activeHeader(index) {
   }
 }
 
-  activeIcon.forEach((item, index) => {
-    item.addEventListener("click", () => {
-      closeInfo(index)
-    })
+activeIcon.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    closeInfo(index)
   })
+})
 
 
 function closeInfo(index) {
