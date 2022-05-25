@@ -24,8 +24,30 @@ ul{
 a{
     text-decoration: none;
 }
+
+.preloader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1
+}
+
+.preloader img {
+    width: 350px;
+    height: 350px;
+}
+
 .header {
     display: flex;
+    
     justify-content: space-around;
     align-items: center;
     background-color: #180f35;
@@ -36,6 +58,7 @@ a{
 .header-wrapper {
     background-color: #180f35;
     border-bottom: 5px solid #8f1698;
+   
 }
 
 .logo {
