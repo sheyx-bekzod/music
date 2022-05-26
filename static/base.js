@@ -1,4 +1,4 @@
-window.addEventListener('load',() => {
+window.addEventListener('load', () => {
   const load = document.querySelector(".preloader")
   setTimeout(() => {
     load.style.display = 'none'
@@ -91,17 +91,17 @@ window.addEventListener('load',() => {
     activeIcon = document.querySelectorAll('.song_type i'),
     popularMusicList = document.querySelectorAll('.popular_music_list')
 
-    typeMusic.forEach((item, index) => {
-      item.addEventListener("click", () => {
-        openInfo(index)
-      })
+  typeMusic.forEach((item, index) => {
+    item.addEventListener("click", () => {
+      openInfo(index)
     })
+  })
 
-    typeMusic.forEach((item, index) => {
-      item.addEventListener("mouseenter", () => {
-        activeHeader(index)
-      })
+  typeMusic.forEach((item, index) => {
+    item.addEventListener("mouseenter", () => {
+      activeHeader(index)
     })
+  })
 
 
   function activeHeader(index) {
@@ -110,11 +110,11 @@ window.addEventListener('load',() => {
     }
   }
 
-    activeIcon.forEach((item, index) => {
-      item.addEventListener("click", () => {
-        closeInfo(index)
-      })
+  activeIcon.forEach((item, index) => {
+    item.addEventListener("click", () => {
+      closeInfo(index)
     })
+  })
 
 
   function closeInfo(index) {
@@ -151,10 +151,10 @@ window.addEventListener('load',() => {
   });
 
 
-  playBtn.forEach((item,index) => {
+  playBtn.forEach((item, index) => {
     item.addEventListener("click", () => {
       playIcon()
-      if (mainMusicBar.src !== musics[index]){
+      if (mainMusicBar.src !== musics[index]) {
         musicStatus = musics[index]
         mainMusicBar.src = musicStatus
       }
@@ -164,13 +164,13 @@ window.addEventListener('load',() => {
 
         setMusicPage(index)
         mainMusicBar.play(musics[index])
-      }else{
+      } else {
         mainMusicBar.pause()
       }
     })
   })
 
-  function setMusicPage(index){
+  function setMusicPage(index) {
     const img = musicImg[index].src
     const owner = mp3Owner[index]
     const name = mp3Name[index]
@@ -180,12 +180,10 @@ window.addEventListener('load',() => {
     mp3CtaAbout[1].innerHTML = name.textContent
   }
 
-  function playIcon(){
+  function playIcon() {
     playBtn.forEach(item => {
       item.classList.remove('fa-circle-pause')
       item.classList.add('fa-circle-play')
     })
   }
 })
-
-
