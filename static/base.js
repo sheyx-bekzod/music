@@ -1,15 +1,14 @@
 window.addEventListener('load', () => {
-  const load = document.querySelector(".preloader")
-  setTimeout(() => {
-    load.style.display = 'none'
-  }, 1000);
+  // const load = document.querySelector(".preloader")
+  // setTimeout(() => {
+  //   load.style.display = 'none'
+  // }, 1000);
 
   const login = document.querySelector(".login")
   const registerWind = document.querySelector('.register')
 
   const loginLink = document.querySelector('.login-link')
   const registerlink = document.querySelector('.register-link')
-  console.log(registerlink);
 
   const block2 = document.querySelector('.block_2')
   const block1 = document.querySelector('.block_1')
@@ -145,7 +144,6 @@ window.addEventListener('load', () => {
 
   let musicStatus = ""
 
-
   audio.forEach(element => {
     musics.push(element.src)
   });
@@ -186,4 +184,65 @@ window.addEventListener('load', () => {
       item.classList.add('fa-circle-play')
     })
   }
+
+  const progressContainer = document.querySelector(".progress_container"),
+    progress = document.querySelector(".progres"),
+    prevBtn = document.querySelector("#prev"),
+    nextBtn = document.querySelector("#next");
+
+  let status = 0
+
+  prevBtn.addEventListener("click", prevBtnClick)
+  nextBtn.addEventListener('click', nextBtnClick)
+
+  if (status > musics.length -1) {
+    status = 0
+  }if (status < 0){
+    status = musics.length -1
+  }
+
+  function nextBtnClick(){
+    console.log(status);
+    pauseMusic()
+    status++
+    mainMusicBar.src = musics[status]
+    mainMusicBar.play()
+  }
+
+  function prevBtnClick(){
+    console.log(status);
+
+    pauseMusic()
+    status--
+    mainMusicBar.src = musics[status]
+    mainMusicBar.play()
+  }
+
+  function pauseMusic(){
+    mainMusicBar.pause()
+  }
+
+  function upDateProgress(e) {
+    const { duration, currentTime } = e.srcElement;
+    const percent = (currentTime / duration) * 100;
+
+    progress.style.width = `${percent}%`;
+    progress.style.height = '5px'
+    progress.style.background = 'red'
+  }
+
+  function setProgress(e){
+    const width = this.clientWidth;
+    const clickX = e.offsetX;
+    const duration = mainMusicBar.duration
+    mainMusicBar.currentTime = (clickX/width)*duration
+  }
+
+  mainMusicBar.addEventListener('timeupdate',upDateProgress)
+  progressContainer.addEventListener("click",setProgress)
+
+
 })
+
+
+

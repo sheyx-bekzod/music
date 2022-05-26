@@ -7,6 +7,16 @@
     text-decoration: none;
 }
 
+* i {
+    cursor: pointer;
+    color: #b311be;
+    font-size: 35px;
+}
+
+* i:hover {
+    color: #fff;
+}
+
 body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.61)), url("../img/bg-4.jpg");
     background-size: cover;
@@ -17,11 +27,12 @@ body {
     box-sizing: border-box;
     min-height: 100vh;
 }
-ul{
+
+ul {
     list-style: none;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -47,7 +58,7 @@ a{
 
 .header {
     display: flex;
-    
+
     justify-content: space-around;
     align-items: center;
     background-color: #180f35;
@@ -58,7 +69,7 @@ a{
 .header-wrapper {
     background-color: #180f35;
     border-bottom: 5px solid #8f1698;
-   
+
 }
 
 .logo {
@@ -432,6 +443,9 @@ a{
     background: #180f35;
     position: absolute;
     bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .wrapper_img {
@@ -457,7 +471,7 @@ a{
     margin-left: 20px;
 }
 
-.song_type h2{
+.song_type h2 {
     display: inline-block;
     margin-top: 50px;
     font-size: 20px;
@@ -482,7 +496,7 @@ a{
 
 /* singer */
 
-#singer{
+#singer {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -497,7 +511,7 @@ a{
     border: 3px #fff solid;
 }
 
-.singer-box:hover:singer-box img{
+.singer-box:hover:singer-box img {
     position: relative;
     top: 200%;
     transition: ease-in 0.5s;
@@ -531,3 +545,118 @@ a{
 .singer-box-info ul li {
     margin-top: 20px;
 }
+
+
+.ctrl_btn {
+    margin: 0 30px 0 0;
+}
+
+.ctrl_btn2 {
+    margin: 0 0 0 30px;
+}
+
+.colmn {
+    height: 100%;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress_container {
+    width: 90%;
+    height: 5px;
+    border-radius: 50px;
+    background: #fff;
+}
+
+
+.progress_mp3_name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    position: relative;
+}
+
+.progress_mp3_name p {
+    color: #fff;
+    margin: 5px;
+    font-family: system-ui;
+}
+
+.artist_name {
+    position: absolute;
+    right: 5px;
+}
+
+.animate_text {
+    position: relative;
+    left: -95px;
+    transition: all 0.5s ease;
+    animation-name: circle;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes circle {
+    from {
+        left: 40px;
+    }
+
+    to {
+        left: -70px;
+    }
+}
+
+.ctrl_buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-share,
+.fa-star {
+    font-size: 28px;
+    padding: 0;
+    margin: 0;
+    margin: 0 5px;
+}
+
+.mp3_sound_controll {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 18px;
+}
+
+.mp3_sound_controll i {
+    color: #fff;
+    font-size: 20px;
+    cursor: auto;
+    margin: 0 10px 0 0;
+}
+
+.slider {
+    -webkit-appearance: none;
+    height: 3px;
+    border-radius: 10px;
+    width: 100px;
+    background: #fff;
+    outline: none;
+    opacity: 0.7;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; 
+    background: #b311be;
+    cursor: pointer;
+  }
+  
