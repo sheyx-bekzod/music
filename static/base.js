@@ -56,7 +56,7 @@ function openRegister() {
 const wrapper = document.querySelector('.wrapper'),
   leftBtn = document.querySelector('.leftBtn'),
   rightBtn = document.querySelector('.rightBtn'),
-  wrapper_album = document.querySelectorAll('.wrapper_img');
+  wrapper_album = document.querySelectorAll('.wrapper_hover_box');
 
 let index = 0;
 
