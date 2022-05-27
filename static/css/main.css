@@ -58,7 +58,6 @@ a {
 
 .header {
     display: flex;
-
     justify-content: space-around;
     align-items: center;
     background-color: #180f35;
@@ -81,6 +80,13 @@ a {
 .logo h1 {
     color: #fff;
     font-size: 25px;
+    margin: 0;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo i {
@@ -89,14 +95,43 @@ a {
     margin-left: 20px;
 }
 
-.search input:focus {
+.search input {
+    border: none;
     outline: none;
+    background: none;
+    border: 1px solid #b311be;
+    text-align: center;
+    color: #fff;
+    border-left: 5px solid #b311be;
 }
 
 .search i {
     color: #8f1698;
-    margin-left: 20px;
+    margin-left: 10px;
+    font-size: 20px;
+    margin: 0;
+    transition: .2s;
 }
+
+.search_icon:hover {
+    background: #b311be;
+    transition: .2s;
+}
+
+.search_icon:hover i {
+    color: #180f35;
+    transition: .2s;
+}
+
+.search_icon {
+    height: 26px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
 
 .nav-list {
     display: flex;
@@ -207,7 +242,6 @@ a {
     display: none;
 }
 
-/* #811b8d */
 
 /* Singer info section */
 #singer_info {
@@ -333,8 +367,57 @@ a {
 .wrapper a img {
     width: 200px;
     height: 150px;
-    margin: 0 5px 0 0;
     border: 2px solid #fff;
+}
+
+.wrapper_hover_box {
+    width: 200px;
+    height: 150px;
+    transition: ease-in-out 0.5s;
+    margin: 0 5px 0 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper_hv {
+    background-color: #261461;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    z-index: 100;
+    position: absolute;
+    left: 0;
+    top: -200px;
+    transition: .2s ease-in-out;
+    border: 2px solid #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper_hv p,
+li,
+ul {
+    font-family: system-ui;
+    text-align: center;
+    margin: 0 0 5px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.wrapper_hv i {
+    color: #fff;
+    font-size: 15px;
+    margin: 0;
+}
+
+.wrapper_hover_box:hover .wrapper_hv {
+    top: 0px;
+    transition: .3s ease-out;
 }
 
 .wrapper_btn {
@@ -448,9 +531,6 @@ a {
     align-items: center;
 }
 
-.wrapper_img {
-    transition: ease-in-out 0.5s;
-}
 
 /* type */
 
@@ -459,7 +539,7 @@ a {
     display: flex;
     justify-content: center;
     width: 230px;
-    height: 100vh;
+    height: 91.6vh;
     border-right: 5px solid #8f1698;
 }
 
@@ -648,15 +728,98 @@ a {
     background: #fff;
     outline: none;
     opacity: 0.7;
-  }
-  
-  .slider::-webkit-slider-thumb {
+}
+
+.slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 20px;
     height: 20px;
-    border-radius: 50%; 
+    border-radius: 50%;
     background: #b311be;
     cursor: pointer;
-  }
-  
+}
+
+
+.container_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home_music_album {
+    height: 91.6vh;
+    width: 83%;
+    padding: 15px 1rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.artist_albums {
+    height: 230px;
+    width: 230px;
+    border: 2px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    margin: 0 0 0 100px;
+}
+
+.artist_albums img {
+    height: 230px;
+    width: 230px;
+}
+
+.home_music_album_hv {
+    background-color: #261461;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    z-index: 100;
+    position: absolute;
+    left: 0;
+    top: -300px;
+    transition: .2s ease-in-out;
+    /* border: 2px solid #fff; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: .3s ease-in;
+}
+
+.artist_albums:hover .home_music_album_hv {
+    top: 0;
+    transition: .3s ease-in;
+}
+
+.home_music_album_hv i {
+    font-size: 20px;
+    margin: 0;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.home_music_album_hv ul li {
+    margin-bottom: 15px;
+}
+
+.home_music_album_hv p {
+    margin-bottom: 15px;
+}
+
+.home_music_album_link {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.home_music_album_link:hover {
+    color: #fff;
+}

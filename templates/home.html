@@ -18,11 +18,11 @@
 
 <body>
 
-    <div class="preloader">
+  <!-- <div class="preloader">
         <img src="https://i.gifer.com/QXjw.gif" alt="">
-    </div>
+    </div> -->
 
-  
+
   <div class="header-wrapper">
 
 
@@ -33,9 +33,12 @@
       </div>
 
       <div class="search">
-        <input type="text">
+        <input type="text" placeholder="Search musics">
         <!-- search icon  -->
-        <i class="fa-solid fa-magnifying-glass"></i>
+        <div class="search_icon">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+
       </div>
 
       <nav class="nav">
@@ -53,73 +56,137 @@
   <section class="register register-none">
     <div class="resiger_block block_1">
       <input type="text" placeholder="Enter your username">
-      <input type="email" placeholder="Enter your email" >
+      <input type="email" placeholder="Enter your email">
       <input type="password" placeholder="Enter your password">
       <input type="password" placeholder="Confirm your password">
 
-    <div class="status-password">
-      <input type="checkbox">
-       <label>Show password</label>
-    </div>
+      <div class="status-password">
+        <input type="checkbox">
+        <label>Show password</label>
+      </div>
 
-    <a style="text-align: center; color: #fff;" class="register-link1">Register</a>
+      <a style="text-align: center; color: #fff;" class="register-link1">Register</a>
 
-    <p class="question-link">Yes accaunt ?</p>
-    <a class="login-link" href="#">Login</a>
+      <p class="question-link">Yes accaunt ?</p>
+      <a class="login-link" href="#">Login</a>
     </div>
 
     <div class="resiger_block block_2 block_hide">
       <input type="text" placeholder="Enter your username">
-      <input type="password" placeholder="Enter your password" >
+      <input type="password" placeholder="Enter your password">
       <p class="question-link">Haven't got accaunt ?</p>
       <a class="register-link" href="#">Register</a>
     </div>
 
   </section>
 
-  <section id="type">
-    <div class="container">
+  <div class="container_box">
 
-      <div class="song_type">
+
+
+    <section id="type">
+      <div class="container">
+
+        <div class="song_type">
           <h2>Popular music</h2> <i class="fa-solid"></i>
-        <ul class="popular_music_list">
-          <li>March</li>
-          <li>February</li>
-          <li>January</li>
-        </ul>
-        <h2>Genre</h2><i class="fa-solid "></i>
-        <ul class="popular_music_list"> 
-          <li>March</li>
-          <li>February</li>
-          <li>January</li>
-        </ul>
-        <h2>Loates music</h2><i class="fa-solid"></i>
-         <ul class="popular_music_list">
-          <li>March</li>
-          <li>February</li>
-          <li>January</li>
-        </ul>
+          <ul class="popular_music_list">
+            <li>March</li>
+            <li>February</li>
+            <li>January</li>
+          </ul>
+          <h2>Genre</h2><i class="fa-solid "></i>
+          <ul class="popular_music_list">
+            <li>March</li>
+            <li>February</li>
+            <li>January</li>
+          </ul>
+          <h2>Loates music</h2><i class="fa-solid"></i>
+          <ul class="popular_music_list">
+            <li>March</li>
+            <li>February</li>
+            <li>January</li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </section>
 
-  </section>
+    <section class="home_music_album">
 
-  <section id="singer">
-    <div class="singer-box">
-      <img src="../static/img/bg-3.jpg" alt="" width="200" height="200">
-      <div class="singer-box-info">
-        <ul>
-          <li>Name</li>
-          <li>Album name</li>
-          <li>Miscs number</li>
-        </ul>
+      <div class="artist_albums">
+        <img src="../static/img/bg-2.jpg" alt="">
+        <div class="home_music_album_hv">
+          <a class="home_music_album_link" href="../templates/singer_info.html">
+            <p>Jsper Kyd</p>
+
+            <ul>
+              <li>Albums: <span>1</span></li>
+              <li>Musics: <span>2</span></li>
+            </ul>
+
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </a>
+
+        </div>
       </div>
 
-    
-  </section>
+      <div class="artist_albums">
+        <img src="../static/img/maxresdefault.jpg" alt="">
+        <div class="home_music_album_hv">
+          <a class="home_music_album_link" href="../templates/singer_info.html">
+            <p>Jsper Kyd</p>
+
+            <ul>
+              <li>Albums: <span>1</span></li>
+              <li>Musics: <span>2</span></li>
+            </ul>
+
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+
+      <div class="artist_albums">
+        <img src="../static/img/merc.jpg" alt="">
+        <div class="home_music_album_hv">
+          <a class="home_music_album_link" href="../templates/singer_info.html">
+            <p>Jsper Kyd</p>
+
+            <ul>
+              <li>Albums: <span>1</span></li>
+              <li>Musics: <span>2</span></li>
+            </ul>
+
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
 
   <script src="../static/base.js"></script>
-  </div>
 
 </body>
 

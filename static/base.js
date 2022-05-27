@@ -21,24 +21,12 @@ window.addEventListener('load', () => {
     setTimeout(() => {
       registerWind.classList.remove('register-none')
     }, 1000);
-  }
 
-  if (window) {
-    window.addEventListener("click", closeMenu)
-  }
-
-  function closeMenu(event) {
-    if (event.target === registerWind) {
-      registerWind.classList.add('register-none')
-      registerWind.style.transition = 'easy-in 2.5s'
+    if (loginLink && registerlink) {
+      loginLink.addEventListener("click", openLogin)
+      registerlink.addEventListener("click", openRegister)
     }
   }
-
-  if (loginLink && registerlink) {
-    loginLink.addEventListener("click", openLogin)
-    registerlink.addEventListener("click", openRegister)
-  }
-
 
   function openLogin() {
     block1.classList.add("block_hide")
@@ -55,21 +43,64 @@ window.addEventListener('load', () => {
   const wrapper = document.querySelector('.wrapper'),
     leftBtn = document.querySelector('.leftBtn'),
     rightBtn = document.querySelector('.rightBtn'),
-    wrapper_album = document.querySelectorAll('.wrapper_img');
+    wrapper_album = document.querySelectorAll('.wrapper_hover_box');
 
   let index = 0;
 
   function changeImage() {
     if (index > wrapper_album.length - 2) {
       index = 0
-    }
-    else if (index < 0) {
+    } else if (index < 0) {
       index = wrapper_album.length - 2;
     }
-    // 
-    wrapper_album.forEach(item => {
-      item.style.transform = `translateX(${-index * 205}px)`
-    });
+
+    if (window) {
+      window.addEventListener("click", closeMenu)
+    }
+
+    function closeMenu(event) {
+      if (event.target === registerWind) {
+        registerWind.classList.add('register-none')
+        registerWind.style.transition = 'easy-in 2.5s'
+      }
+    }
+
+    if (loginLink && registerlink) {
+      loginLink.addEventListener("click", openLogin)
+      registerlink.addEventListener("click", openRegister)
+    }
+
+
+    function openLogin() {
+      block1.classList.add("block_hide")
+      block2.classList.remove('block_hide')
+    }
+
+    function openRegister() {
+      block1.classList.remove("block_hide")
+      block2.classList.add('block_hide')
+    }
+
+
+    // singer_info.html // corousel 
+    const wrapper = document.querySelector('.wrapper'),
+      leftBtn = document.querySelector('.leftBtn'),
+      rightBtn = document.querySelector('.rightBtn'),
+      wrapper_album = document.querySelectorAll('.wrapper_img');
+
+    let index = 0;
+
+    function changeImage() {
+      if (index > wrapper_album.length - 2) {
+        index = 0
+      } else if (index < 0) {
+        index = wrapper_album.length - 2;
+      }
+      // 
+      wrapper_album.forEach(item => {
+        item.style.transform = `translateX(${-index * 205}px)`
+      });
+    }
   }
 
   if (rightBtn) {
@@ -141,32 +172,40 @@ window.addEventListener('load', () => {
   console.log(mp3CtaAbout);
 
 
-
   let musicStatus = ""
 
   audio.forEach(element => {
     musics.push(element.src)
   });
+  console.log(playBtn);
+  const pauseMusicbtn = document.querySelector("#pause")
 
 
-  playBtn.forEach((item, index) => {
-    item.addEventListener("click", () => {
-      playIcon()
-      if (mainMusicBar.src !== musics[index]) {
-        musicStatus = musics[index]
-        mainMusicBar.src = musicStatus
-      }
-      if (mainMusicBar.paused) {
-        item.classList.add("fa-circle-pause")
-        item.classList.remove("fa-circle-play")
+  function playAudio() {
+    playBtn.forEach((item, index) => {
+      item.addEventListener("click", () => {
+        playIcon()
+        if (mainMusicBar.src !== musics[index]) {
+          musicStatus = musics[index]
+          mainMusicBar.src = musicStatus
+        } if(mainMusicBar.paused) {
+          pauseMusicbtn.classList.remove('fa-circle-play')
+          pauseMusicbtn.classList.add('fa-circle-pause')
+          item.classList.add("fa-circle-pause")
+          item.classList.remove("fa-circle-play")
 
-        setMusicPage(index)
-        mainMusicBar.play(musics[index])
-      } else {
-        mainMusicBar.pause()
-      }
+          setMusicPage(index)
+          mainMusicBar.play(musics[index])
+        } else {
+          pauseMusicbtn.classList.add('fa-circle-play')
+          pauseMusicbtn.classList.remove('fa-circle-pause')
+          mainMusicBar.pause()
+        }
+      })
     })
-  })
+  }
+
+  playAudio()
 
   function setMusicPage(index) {
     const img = musicImg[index].src
@@ -189,36 +228,76 @@ window.addEventListener('load', () => {
     progress = document.querySelector(".progres"),
     prevBtn = document.querySelector("#prev"),
     nextBtn = document.querySelector("#next");
+  console.log(mainMusicBar.src);
 
+  pauseMusicbtn.addEventListener("click", () => {
+    playIcon()
+    if (!status) {
+      if (mainMusicBar.paused) {
+        mainMusicBar.src = musics[0]
+        pauseMusicbtn.classList.remove('fa-circle-play')
+        pauseMusicbtn.classList.add('fa-circle-pause')
+        mainMusicBar.play()
+      } else {
+        pauseMusicbtn.classList.add('fa-circle-play')
+        pauseMusicbtn.classList.remove('fa-circle-pause')
+        mainMusicBar.pause()
+      }
+    }else{
+      if (mainMusicBar.paused) {
+          pauseMusicbtn.classList.remove('fa-circle-play')
+          pauseMusicbtn.classList.add('fa-circle-pause')
+          pauseIcon()
+          mainMusicBar.play()
+      }else{
+        pauseMusicbtn.classList.add('fa-circle-play')
+        pauseMusicbtn.classList.remove('fa-circle-pause')
+        mainMusicBar.pause()
+      }
+    }
+  })
+  function pauseIcon(){
+    playBtn.forEach(item => {
+      item.classList.add("fa-circle-pause")
+      item.classList.remove("fa-circle-play")
+    })
+  }
+
+  
   let status = 0
 
   prevBtn.addEventListener("click", prevBtnClick)
   nextBtn.addEventListener('click', nextBtnClick)
 
-  if (status > musics.length -1) {
-    status = 0
-  }if (status < 0){
-    status = musics.length -1
-  }
-
-  function nextBtnClick(){
-    console.log(status);
-    pauseMusic()
+  function nextBtnClick() {
     status++
-    mainMusicBar.src = musics[status]
-    mainMusicBar.play()
-  }
-
-  function prevBtnClick(){
-    console.log(status);
-
+    if (status > musics.length - 1) {
+      status = 0
+    } else if (status < 0) {
+      status = musics.length - 1
+    }
     pauseMusic()
-    status--
+    pauseMusicbtn.classList.remove('fa-circle-play')
+    pauseMusicbtn.classList.add('fa-circle-pause')
     mainMusicBar.src = musics[status]
     mainMusicBar.play()
   }
 
-  function pauseMusic(){
+  function prevBtnClick() {
+    status--
+    if (status > musics.length - 1) {
+      status = 0
+    } else if (status < 0) {
+      status = musics.length - 1
+    }
+    pauseMusic()
+    pauseMusicbtn.classList.remove('fa-circle-play')
+    pauseMusicbtn.classList.add('fa-circle-pause')
+    mainMusicBar.src = musics[status]
+    mainMusicBar.play()
+  }
+
+  function pauseMusic() {
     mainMusicBar.pause()
   }
 
@@ -231,16 +310,15 @@ window.addEventListener('load', () => {
     progress.style.background = 'red'
   }
 
-  function setProgress(e){
+  function setProgress(e) {
     const width = this.clientWidth;
     const clickX = e.offsetX;
     const duration = mainMusicBar.duration
-    mainMusicBar.currentTime = (clickX/width)*duration
+    mainMusicBar.currentTime = (clickX / width) * duration
   }
 
-  mainMusicBar.addEventListener('timeupdate',upDateProgress)
-  progressContainer.addEventListener("click",setProgress)
-
+  mainMusicBar.addEventListener('timeupdate', upDateProgress)
+  progressContainer.addEventListener("click", setProgress)
 
 })
 
