@@ -40,10 +40,54 @@ window.addEventListener('load', () => {
 
 
   // singer_info.html // corousel 
+  // const wrapper = document.querySelector('.wrapper'),
+  //   leftBtn = document.querySelector('.leftBtn'),
+  //   rightBtn = document.querySelector('.rightBtn'),
+  //   wrapper_album = document.querySelectorAll('.wrapper_hover_box');
+
+  // let index = 0;
+
+  // function changeImage() {
+  //   if (index > wrapper_album.length - 2) {
+  //     index = 0
+  //   } else if (index < 0) {
+  //     index = wrapper_album.length - 2;
+  //   }
+
+  if (window) {
+    window.addEventListener("click", closeMenu)
+  }
+
+  function closeMenu(event) {
+    if (event.target === registerWind) {
+      registerWind.classList.add('register-none')
+      registerWind.style.transition = 'easy-in 2.5s'
+    }
+  }
+
+  if (loginLink && registerlink) {
+    loginLink.addEventListener("click", openLogin)
+    registerlink.addEventListener("click", openRegister)
+  }
+
+
+  function openLogin() {
+    block1.classList.add("block_hide")
+    block2.classList.remove('block_hide')
+  }
+
+  function openRegister() {
+    block1.classList.remove("block_hide")
+    block2.classList.add('block_hide')
+  }
+
+
+  // singer_info.html // corousel 
   const wrapper = document.querySelector('.wrapper'),
     leftBtn = document.querySelector('.leftBtn'),
     rightBtn = document.querySelector('.rightBtn'),
-    wrapper_album = document.querySelectorAll('.wrapper_hover_box');
+    wrapper_album = document.querySelectorAll('.wrapper_img'),
+    wrapper_hv = document.querySelectorAll('.wrapper_hv');
 
   let index = 0;
 
@@ -53,54 +97,12 @@ window.addEventListener('load', () => {
     } else if (index < 0) {
       index = wrapper_album.length - 2;
     }
-
-    if (window) {
-      window.addEventListener("click", closeMenu)
-    }
-
-    function closeMenu(event) {
-      if (event.target === registerWind) {
-        registerWind.classList.add('register-none')
-        registerWind.style.transition = 'easy-in 2.5s'
-      }
-    }
-
-    if (loginLink && registerlink) {
-      loginLink.addEventListener("click", openLogin)
-      registerlink.addEventListener("click", openRegister)
-    }
-
-
-    function openLogin() {
-      block1.classList.add("block_hide")
-      block2.classList.remove('block_hide')
-    }
-
-    function openRegister() {
-      block1.classList.remove("block_hide")
-      block2.classList.add('block_hide')
-    }
-
-
-    // singer_info.html // corousel 
-    const wrapper = document.querySelector('.wrapper'),
-      leftBtn = document.querySelector('.leftBtn'),
-      rightBtn = document.querySelector('.rightBtn'),
-      wrapper_album = document.querySelectorAll('.wrapper_img');
-
-    let index = 0;
-
-    function changeImage() {
-      if (index > wrapper_album.length - 2) {
-        index = 0
-      } else if (index < 0) {
-        index = wrapper_album.length - 2;
-      }
-      // 
-      wrapper_album.forEach(item => {
-        item.style.transform = `translateX(${-index * 205}px)`
-      });
-    }
+    wrapper_album.forEach(item => {
+      item.style.transform = `translateX(${-index * 205}px)`
+    });
+    wrapper_hv.forEach(hv => {
+      hv.style.transform = `translateX(${-index * 205}px)`
+    });
   }
 
   if (rightBtn) {
@@ -169,7 +171,6 @@ window.addEventListener('load', () => {
   const mp3Ct = document.querySelector(".mp3_ct img")
   const mp3CtaAbout = document.querySelectorAll('.mp3_ct_about')
 
-  console.log(mp3CtaAbout);
 
 
   let musicStatus = ""
@@ -177,7 +178,6 @@ window.addEventListener('load', () => {
   audio.forEach(element => {
     musics.push(element.src)
   });
-  console.log(playBtn);
   const pauseMusicbtn = document.querySelector("#pause")
 
 
@@ -188,7 +188,7 @@ window.addEventListener('load', () => {
         if (mainMusicBar.src !== musics[index]) {
           musicStatus = musics[index]
           mainMusicBar.src = musicStatus
-        } if(mainMusicBar.paused) {
+        } if (mainMusicBar.paused) {
           pauseMusicbtn.classList.remove('fa-circle-play')
           pauseMusicbtn.classList.add('fa-circle-pause')
           item.classList.add("fa-circle-pause")
@@ -228,7 +228,6 @@ window.addEventListener('load', () => {
     progress = document.querySelector(".progres"),
     prevBtn = document.querySelector("#prev"),
     nextBtn = document.querySelector("#next");
-  console.log(mainMusicBar.src);
 
   pauseMusicbtn.addEventListener("click", () => {
     playIcon()
@@ -243,27 +242,27 @@ window.addEventListener('load', () => {
         pauseMusicbtn.classList.remove('fa-circle-pause')
         mainMusicBar.pause()
       }
-    }else{
+    } else {
       if (mainMusicBar.paused) {
-          pauseMusicbtn.classList.remove('fa-circle-play')
-          pauseMusicbtn.classList.add('fa-circle-pause')
-          pauseIcon()
-          mainMusicBar.play()
-      }else{
+        pauseMusicbtn.classList.remove('fa-circle-play')
+        pauseMusicbtn.classList.add('fa-circle-pause')
+        pauseIcon()
+        mainMusicBar.play()
+      } else {
         pauseMusicbtn.classList.add('fa-circle-play')
         pauseMusicbtn.classList.remove('fa-circle-pause')
         mainMusicBar.pause()
       }
     }
   })
-  function pauseIcon(){
+  function pauseIcon() {
     playBtn.forEach(item => {
       item.classList.add("fa-circle-pause")
       item.classList.remove("fa-circle-play")
     })
   }
 
-  
+
   let status = 0
 
   prevBtn.addEventListener("click", prevBtnClick)

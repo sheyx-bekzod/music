@@ -417,7 +417,7 @@ ul {
 
 .wrapper_hover_box:hover .wrapper_hv {
     top: 0px;
-    transition: .5s ease-out;
+    transition: .3s ease-out;
 }
 
 .wrapper_btn {
@@ -696,6 +696,9 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.wrapper_img {
+    transition: all 0.3s linear;
 }
 
 .fa-share,
