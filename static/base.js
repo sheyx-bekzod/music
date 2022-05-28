@@ -1,8 +1,8 @@
 window.addEventListener('load', () => {
-  // const load = document.querySelector(".preloader")
-  // setTimeout(() => {
-  //   load.style.display = 'none'
-  // }, 1000);
+  const load = document.querySelector(".preloader")
+  setTimeout(() => {
+    load.style.display = 'none'
+  }, 1000);
 
   const login = document.querySelector(".login")
   const registerWind = document.querySelector('.register')
@@ -284,6 +284,7 @@ window.addEventListener('load', () => {
       status = musics.length - 1
     }
     pauseMusic()
+    setMusicPage(status)
     pauseMusicbtn.classList.remove('fa-circle-play')
     pauseMusicbtn.classList.add('fa-circle-pause')
     playBtn[status].classList.add('fa-circle-pause')
@@ -301,6 +302,7 @@ window.addEventListener('load', () => {
       status = musics.length - 1
     }
     pauseMusic()
+    setMusicPage(status)
     pauseMusicbtn.classList.remove('fa-circle-play')
     pauseMusicbtn.classList.add('fa-circle-pause')
     mainMusicBar.src = musics[status]
