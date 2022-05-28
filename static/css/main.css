@@ -43,12 +43,12 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    z-index: 1
+    z-index: 1;
 }
 
 .preloader img {
-    height: 600px;
-    width: 700px;
+    height: 400px;
+    width: 500px;
 }
 
 /* loader end */
@@ -655,15 +655,12 @@ ul {
     height: 6px;
     background: #fff;
     cursor: pointer;
-<<<<<<< HEAD
 }
 
 .progres {
     background: #b311be;
     height: 6px;
     cursor: pointer;
-=======
->>>>>>> 4ef8e282776c1c2895f965745f79baa94e3532f4
 }
 
 

@@ -227,7 +227,13 @@ window.addEventListener('load', () => {
   const progressContainer = document.querySelector(".progress_container"),
     progress = document.querySelector(".progres"),
     prevBtn = document.querySelector("#prev"),
-    nextBtn = document.querySelector("#next");
+    nextBtn = document.querySelector("#next"),
+    share = document.querySelector('#share')
+
+
+  const obj = {
+    again: false,
+  }
 
   let status = 0
 
@@ -320,6 +326,14 @@ window.addEventListener('load', () => {
     const percent = (currentTime / duration) * 100;
 
     progress.style.width = `${percent}%`;
+
+    if (mainMusicBar.ended && again) {
+      if (mainMusicBar.paused) {
+        mainMusicBar.play()
+      }
+    }else if (mainMusicBar.ended && !again){
+      nextBtnClick()
+    }
   }
 
   function setProgress(e) {
@@ -331,6 +345,18 @@ window.addEventListener('load', () => {
 
   mainMusicBar.addEventListener('timeupdate', upDateProgress)
   progressContainer.addEventListener("click", setProgress)
+
+  let again = false;
+  share.addEventListener("click", () => {
+    share.classList.toggle('fa-rotate')
+    share.classList.toggle('fa-share')
+    if (!again){
+      again = true
+    }else{
+      again = false
+    }
+    console.log(again);
+  })
 
 })
 
