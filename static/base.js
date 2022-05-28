@@ -229,6 +229,8 @@ window.addEventListener('load', () => {
     prevBtn = document.querySelector("#prev"),
     nextBtn = document.querySelector("#next");
 
+  let status = 0
+
   pauseMusicbtn.addEventListener("click", () => {
     playIcon()
     if (!status) {
@@ -236,6 +238,8 @@ window.addEventListener('load', () => {
         mainMusicBar.src = musics[0]
         pauseMusicbtn.classList.remove('fa-circle-play')
         pauseMusicbtn.classList.add('fa-circle-pause')
+        playBtn[0].classList.add("fa-circle-pause")
+        playBtn[0].classList.remove("fa-circle-play")
         mainMusicBar.play()
       } else {
         pauseMusicbtn.classList.add('fa-circle-play')
@@ -246,11 +250,18 @@ window.addEventListener('load', () => {
       if (mainMusicBar.paused) {
         pauseMusicbtn.classList.remove('fa-circle-play')
         pauseMusicbtn.classList.add('fa-circle-pause')
+
         pauseIcon()
+
+        playIcon()
+        playBtn[status].classList.add("fa-circle-pause")
+        playBtn[status].classList.remove("fa-circle-play")
         mainMusicBar.play()
       } else {
         pauseMusicbtn.classList.add('fa-circle-play')
         pauseMusicbtn.classList.remove('fa-circle-pause')
+        playBtn[status].classList.remove("fa-circle-pause")
+        playBtn[status].classList.add("fa-circle-play")
         mainMusicBar.pause()
       }
     }
@@ -261,14 +272,11 @@ window.addEventListener('load', () => {
       item.classList.remove("fa-circle-play")
     })
   }
-
-
-  let status = 0
-
   prevBtn.addEventListener("click", prevBtnClick)
   nextBtn.addEventListener('click', nextBtnClick)
 
   function nextBtnClick() {
+    playIcon()
     status++
     if (status > musics.length - 1) {
       status = 0
@@ -278,11 +286,14 @@ window.addEventListener('load', () => {
     pauseMusic()
     pauseMusicbtn.classList.remove('fa-circle-play')
     pauseMusicbtn.classList.add('fa-circle-pause')
+    playBtn[status].classList.add('fa-circle-pause')
+    playBtn[status].classList.remove('fa-circle-play')
     mainMusicBar.src = musics[status]
     mainMusicBar.play()
   }
 
   function prevBtnClick() {
+    playIcon()
     status--
     if (status > musics.length - 1) {
       status = 0
@@ -293,6 +304,8 @@ window.addEventListener('load', () => {
     pauseMusicbtn.classList.remove('fa-circle-play')
     pauseMusicbtn.classList.add('fa-circle-pause')
     mainMusicBar.src = musics[status]
+    playBtn[status].classList.add('fa-circle-pause')
+    playBtn[status].classList.remove('fa-circle-play')
     mainMusicBar.play()
   }
 
