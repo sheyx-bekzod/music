@@ -318,8 +318,6 @@ window.addEventListener('load', () => {
     const percent = (currentTime / duration) * 100;
 
     progress.style.width = `${percent}%`;
-    progress.style.height = '5px'
-    progress.style.background = 'red'
   }
 
   function setProgress(e) {

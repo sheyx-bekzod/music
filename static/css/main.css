@@ -652,9 +652,9 @@ ul {
 
 .progress_container {
     width: 90%;
-    height: 5px;
-    border-radius: 50px;
+    height: 6px;
     background: #fff;
+    cursor: pointer;
 }
 
 
@@ -670,6 +670,11 @@ ul {
     color: #fff;
     margin: 5px;
     font-family: system-ui;
+}
+.progres {
+    height: 6px;
+    background: #b311be;
+    cursor: pointer;
 }
 
 .artist_name {
