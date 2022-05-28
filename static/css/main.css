@@ -656,6 +656,15 @@ ul {
     height: 6px;
     background: #fff;
     cursor: pointer;
+<<<<<<< HEAD
+}
+
+.progres {
+    background: #b311be;
+    height: 6px;
+    cursor: pointer;
+=======
+>>>>>>> 4ef8e282776c1c2895f965745f79baa94e3532f4
 }
 
 
