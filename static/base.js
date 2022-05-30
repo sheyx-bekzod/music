@@ -223,7 +223,13 @@ window.addEventListener('load', () => {
   const progressContainer = document.querySelector(".progress_container"),
     progress = document.querySelector(".progres"),
     prevBtn = document.querySelector("#prev"),
-    nextBtn = document.querySelector("#next");
+    nextBtn = document.querySelector("#next"),
+    share = document.querySelector('#share')
+
+
+  const obj = {
+    again: false,
+  }
 
   let status = 0
 
@@ -322,7 +328,13 @@ window.addEventListener('load', () => {
 
     progress.style.width = `${percent}%`;
     if (mainMusicBar.ended) {
-      nextBtnClick()
+      if (mainMusicBar.ended && again) {
+        if (mainMusicBar.paused) {
+          mainMusicBar.play()
+        }
+      } else if (mainMusicBar.ended && !again) {
+        nextBtnClick()
+      }
     }
   }
 
@@ -356,6 +368,20 @@ window.addEventListener('load', () => {
   }
 
   addLink();
+
+  let again = false;
+  share.addEventListener("click", () => {
+    share.classList.toggle('fa-rotate')
+    share.classList.toggle('fa-share')
+    if (!again) {
+      again = true
+    } else {
+      again = false
+    }
+    console.log(again);
+  })
+
+
 
 })
 
