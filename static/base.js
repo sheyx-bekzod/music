@@ -86,22 +86,18 @@ window.addEventListener('load', () => {
   const wrapper = document.querySelector('.wrapper'),
     leftBtn = document.querySelector('.leftBtn'),
     rightBtn = document.querySelector('.rightBtn'),
-    wrapper_album = document.querySelectorAll('.wrapper_img'),
-    wrapper_hv = document.querySelectorAll('.wrapper_hv');
+    wrapper_hover_box = document.querySelectorAll('.wrapper_hover_box');
 
   let index = 0;
 
   function changeImage() {
-    if (index > wrapper_album.length - 2) {
+    if (index > wrapper_hover_box.length - 2) {
       index = 0
     } else if (index < 0) {
-      index = wrapper_album.length - 2;
+      index = wrapper_hover_box.length - 2;
     }
-    wrapper_album.forEach(item => {
+    wrapper_hover_box.forEach(item => {
       item.style.transform = `translateX(${-index * 205}px)`
-    });
-    wrapper_hv.forEach(hv => {
-      hv.style.transform = `translateX(${-index * 205}px)`
     });
   }
 
@@ -125,9 +121,9 @@ window.addEventListener('load', () => {
 
   typeMusic.forEach((item, index) => {
     item.addEventListener("click", () => {
-      openInfo(index)
-    })
-  })
+      openInfo(index);
+    });
+  });
 
   typeMusic.forEach((item, index) => {
     item.addEventListener("mouseenter", () => {
@@ -231,49 +227,54 @@ window.addEventListener('load', () => {
 
   let status = 0
 
-  pauseMusicbtn.addEventListener("click", () => {
-    playIcon()
-    if (!status) {
-      if (mainMusicBar.paused) {
-        mainMusicBar.src = musics[0]
-        pauseMusicbtn.classList.remove('fa-circle-play')
-        pauseMusicbtn.classList.add('fa-circle-pause')
-        playBtn[0].classList.add("fa-circle-pause")
-        playBtn[0].classList.remove("fa-circle-play")
-        mainMusicBar.play()
+  if (pauseMusicbtn) {
+    pauseMusicbtn.addEventListener("click", () => {
+      playIcon()
+      if (!status) {
+        if (mainMusicBar.paused) {
+          mainMusicBar.src = musics[0]
+          pauseMusicbtn.classList.remove('fa-circle-play')
+          pauseMusicbtn.classList.add('fa-circle-pause')
+          playBtn[0].classList.add("fa-circle-pause")
+          playBtn[0].classList.remove("fa-circle-play")
+          mainMusicBar.play()
+        } else {
+          pauseMusicbtn.classList.add('fa-circle-play')
+          pauseMusicbtn.classList.remove('fa-circle-pause')
+          mainMusicBar.pause()
+        }
       } else {
-        pauseMusicbtn.classList.add('fa-circle-play')
-        pauseMusicbtn.classList.remove('fa-circle-pause')
-        mainMusicBar.pause()
-      }
-    } else {
-      if (mainMusicBar.paused) {
-        pauseMusicbtn.classList.remove('fa-circle-play')
-        pauseMusicbtn.classList.add('fa-circle-pause')
+        if (mainMusicBar.paused) {
+          pauseMusicbtn.classList.remove('fa-circle-play')
+          pauseMusicbtn.classList.add('fa-circle-pause')
 
-        pauseIcon()
+          pauseIcon()
 
-        playIcon()
-        playBtn[status].classList.add("fa-circle-pause")
-        playBtn[status].classList.remove("fa-circle-play")
-        mainMusicBar.play()
-      } else {
-        pauseMusicbtn.classList.add('fa-circle-play')
-        pauseMusicbtn.classList.remove('fa-circle-pause')
-        playBtn[status].classList.remove("fa-circle-pause")
-        playBtn[status].classList.add("fa-circle-play")
-        mainMusicBar.pause()
+          playIcon()
+          playBtn[status].classList.add("fa-circle-pause")
+          playBtn[status].classList.remove("fa-circle-play")
+          mainMusicBar.play()
+        } else {
+          pauseMusicbtn.classList.add('fa-circle-play')
+          pauseMusicbtn.classList.remove('fa-circle-pause')
+          playBtn[status].classList.remove("fa-circle-pause")
+          playBtn[status].classList.add("fa-circle-play")
+          mainMusicBar.pause()
+        }
       }
-    }
-  })
+    })
+  }
   function pauseIcon() {
     playBtn.forEach(item => {
       item.classList.add("fa-circle-pause")
       item.classList.remove("fa-circle-play")
     })
   }
-  prevBtn.addEventListener("click", prevBtnClick)
-  nextBtn.addEventListener('click', nextBtnClick)
+  if (prevBtn && nextBtn) {
+    prevBtn.addEventListener("click", prevBtnClick)
+    nextBtn.addEventListener('click', nextBtnClick)
+  }
+
 
   function nextBtnClick() {
     playIcon()
@@ -320,6 +321,9 @@ window.addEventListener('load', () => {
     const percent = (currentTime / duration) * 100;
 
     progress.style.width = `${percent}%`;
+    if (mainMusicBar.ended) {
+      nextBtnClick()
+    }
   }
 
   function setProgress(e) {
@@ -329,8 +333,29 @@ window.addEventListener('load', () => {
     mainMusicBar.currentTime = (clickX / width) * duration
   }
 
-  mainMusicBar.addEventListener('timeupdate', upDateProgress)
-  progressContainer.addEventListener("click", setProgress)
+  if (mainMusicBar && progressContainer) {
+    mainMusicBar.addEventListener('timeupdate', upDateProgress);
+    progressContainer.addEventListener("click", setProgress);
+  }
+
+  const category_link = document.querySelectorAll('.category')
+
+  function removeLink() {
+    category_link.forEach(item => {
+      item.classList.remove('category_active');
+    });
+  }
+
+  function addLink() {
+    category_link.forEach(item => {
+      item.addEventListener('click', () => {
+        removeLink();
+        item.classList.add('category_active');
+      });
+    });
+  }
+
+  addLink();
 
 })
 

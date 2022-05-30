@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabinet</title>
+
+    <link rel="shortcut icon" href="../static/img/favicon2.png" type="image/x-icon">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../static/css/main.css">
+</head>
+
+<body>
+
+
+    <div class="preloader">
+        <img src="../static/img/load/load.gif" alt="">
+    </div>
+
+
+    <div class="header-wrapper">
+
+
+        <header class="header container">
+            <div class="logo">
+                <h1 class="logog-header">Music Word </h1>
+                <i class="fa-solid fa-music"></i>
+            </div>
+
+            <div class="search">
+                <input type="text" placeholder="Search musics">
+                <!-- search icon  -->
+                <div class="search_icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+            </div>
+
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li>favaurte</li>
+                    <i class="fa fa-star"></i>
+                    <li><a href="#" style="color: #fff;" class="login">Login</a></li>
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                </ul>
+            </nav>
+        </header>
+
+    </div>
+
+    <div class="cnt_box">
+
+        <section class="flx">
+
+            <div class="leftbox">
+                <div class="ct_box">
+                    <div class="category_link">
+                        <a href="#" class="category">Singer</a>
+                        <a href="#" class="category">Category</a>
+                        <a href="#" class="category">Genre</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rightbox">
+                <div class="add_music_box">
+                    <div class="add_music_input">
+                        <label for="add_music">
+                            <i class="fa-solid fa-file-audio"></i>
+                        </label>
+                        <input type="file" id="add_music" hidden required>
+                    </div>
+
+                    <div class="add_music_information">
+                        <label for="add_music_img">
+                            <img class="mp3_img" src="https://www.codeproject.com/KB/GDI-plus/ImageProcessing2/img.jpg"
+                                alt="">
+                        </label>
+                        <input type="file" id="add_music_img" hidden>
+
+                        <input class="music_info" required type="text" placeholder="Enter title of music">
+                        <input class="music_info" required type="text" placeholder="Enter title of music">
+                        <input class="music_info" required type="text" placeholder="Enter artist of music">
+                        <input class="music_info" required type="text" placeholder="Enter album of music">
+                        <input class="music_info" required type="text" placeholder="Enter genre of music">
+                        <input class="music_info" required type="text" placeholder="Enter category of music">
+                        <input class="add_input" type="submit" value="Add music">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+    <div class="music_control"></div>
+
+
+    <script src="../static/base.js"></script>
+</body>
+
+</html>
