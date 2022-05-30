@@ -18,7 +18,7 @@
 }
 
 body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.61), rgba(0, 0, 0, 0.61)), url("../img/bg-4.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.445), rgba(0, 0, 0, 0.445)), url("../img/bg-4.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
@@ -475,6 +475,7 @@ ul {
     height: 425px;
     width: 85%;
     padding: 10px 0;
+    overflow: auto;
 }
 
 .user_music_box {
@@ -676,6 +677,7 @@ ul {
     margin: 5px;
     font-family: system-ui;
 }
+
 .progres {
     height: 6px;
     background: #b311be;
@@ -846,21 +848,170 @@ ul {
 
 
 
-/* &::-webkit-scrollbar{
+.user_musics::-webkit-scrollbar {
     width: 10px;
     cursor: pointer;
-  }
-  &::-webkit-scrollbar-track {
+}
+
+.user_musics::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px grey;
     cursor: pointer;
 }
 
-  &::-webkit-scrollbar-thumb{
+.user_musics::-webkit-scrollbar-thumb {
     background: rgba(230, 0, 255, 0.24);
     cursor: pointer;
-  }
+}
 
-  &::-webkit-scrollbar-thumb:hover {
-    background: $basic_color;
+.user_musics::-webkit-scrollbar-thumb:hover {
+    background: #b311be;
     cursor: pointer;
-  } */
+}
+
+.flx {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    width: 85vw;
+    height: 543px;
+    background: rgba(65, 65, 65, 0.671);
+    backdrop-filter: blur(5px);
+}
+
+.leftbox,
+.rightbox {
+    height: 100%;
+    width: 100%;
+}
+
+.leftbox {
+    border-right: 2px solid #b311be;
+}
+
+.rightbox {
+    border-left: 2px solid #b311be;
+}
+
+.ct_box {
+    padding: 1rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.category {
+    text-decoration: none;
+    color: #b311be;
+    background: #261461;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-bottom: 2px solid #8f1698;
+}
+
+.category:hover {
+    color: #b311be;
+}
+
+.category_active {
+    background: #8f1698;
+    color: #fff;
+}
+
+.category_active:hover {
+    color: #fff;
+}
+
+.add_music_box {
+    padding: 8rem 2rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.music_info {
+    padding: 0;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #b311be;
+    border-left: 3px solid #000;
+    background: #000;
+    padding: 5px 8px;
+    width: 250px;
+    margin: 5px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.music_info::placeholder {
+    color: #fff;
+    font-family: system-ui;
+    font-size: 15px;
+    text-align: start;
+}
+
+.mp3_img {
+    width: 130px;
+}
+
+.music_info:focus {
+    border-left: 3px solid #b311be;
+}
+
+.add_music_information label {
+    margin-bottom: 10px;
+}
+
+.add_music_information {
+    height: 300px;
+    overflow: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2rem 0 0;
+}
+
+
+
+.add_music_information::-webkit-scrollbar {
+    width: 10px;
+    cursor: pointer;
+}
+
+.add_music_information::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    cursor: pointer;
+}
+
+.add_music_information::-webkit-scrollbar-thumb {
+    background: rgba(230, 0, 255, 0.24);
+    cursor: pointer;
+}
+
+.add_music_information::-webkit-scrollbar-thumb:hover {
+    background: #b311be;
+    cursor: pointer;
+}
+
+.add_music_input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-file-audio {
+    font-size: 85px;
+}
+.fa-file-audio:hover {
+    color: #b311be;
+}
+
+.add_input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #b311be;
+    background: none;
+    padding: 5px 2px;
+    color: #fff;
+}
