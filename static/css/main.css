@@ -164,9 +164,14 @@ a {
     position: fixed;
     top: 0;
     left: 0;
+<<<<<<< HEAD
+    background-color: rgba(0, 0, 0, 0.396);
+    z-index: 1;
+=======
     background-color: rgba(0, 0, 0, 0.56);
     z-index: 10;
     backdrop-filter: blur(6px);
+>>>>>>> 0f0de4dd524a74cc441f1c809f8853fd265191b5
 }
 
 .resiger_block {
@@ -835,6 +840,7 @@ ul {
     width: 83%;
     padding: 15px 1rem;
     display: flex;
+    z-index: -1;
     flex-wrap: wrap;
 }
 
