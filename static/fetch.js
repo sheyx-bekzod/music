@@ -2,8 +2,9 @@ const name = document.querySelector('#reg_name'),
     blockOne = document.querySelector(".block_1"),
     reg_email = document.querySelector('#reg_email'),
     reg_password = document.querySelector('#reg_password'),
-    reg_confirm_password = document.querySelector('#reg_confirm_password');
-sumbitBtn = document.querySelector(".submit")
+    reg_confirm_password = document.querySelector('#reg_confirm_password'),
+    sumbitBtn = document.querySelector("#submit");
+console.log(sumbitBtn)
 
 
 const elem = document.querySelector('.msg')
@@ -29,6 +30,8 @@ reg_confirm_password.addEventListener("change", () => {
         elem1.innerHTML = ""
         elem1.innerHTML = "password length must be order 8"
         console.log('password length must be order 8')
+        sumbitBtn.disabled = true
+
     } else {
         elem1.innerHTML = ""
         sumbitBtn.disabled = false
@@ -42,7 +45,6 @@ reg_confirm_password.addEventListener("change", () => {
         }
     }
 })
-
 
 sumbitBtn.addEventListener("click", sendRequest)
 

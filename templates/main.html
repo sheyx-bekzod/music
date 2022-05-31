@@ -54,29 +54,39 @@
 
 <section class="register register-none">
     <div class="resiger_block block_1">
-        <input type="text" placeholder="Enter your username" id="reg_name">
+        {#
+{#        <p class="msg1" style="color: #fff"></p>#}
+        {##}
+        {#        <div class="status-password">#}
+        {#            <input type="checkbox">#}
+        {#            <label>Show password</label>#}
+        {#        </div>#}
+        {#        <button class="submit"><a style="text-align: center; color: #fff;" class="register-link1" id="register_submit">Register</a>#}
+        {#        </button>#}
+
+        <input type="text" placeholder="Enter your username" id="reg_name">#}
         <input type="email" placeholder="Enter your email" id="reg_email">
         <input type="password" placeholder="Enter your password" id="reg_password">
         <p class="msg" style="color: #fff"></p>
         <input type="password" placeholder="Confirm your password" id="reg_confirm_password">
         <p class="msg1" style="color: #fff"></p>
-
-        <div class="status-password">
-            <input type="checkbox">
-            <label>Show password</label>
+        <i class="fa-solid fa-eye"></i>
+        <button id="submit"><a class="register-link1 submit"  href="#">Register</a></button>
+        <div class="lg_link">
+            <p class="question-link">Yes accaunt ?</p>
+            <a class="login-link" href="#" >Login</a>
         </div>
-        <button class="submit"><a style="text-align: center; color: #fff;" class="register-link1" id="register_submit">Register</a>
-        </button>
-
-        <p class="question-link">Yes accaunt ?</p>
-        <a class="login-link" href="#">Login</a>
     </div>
 
     <div class="resiger_block block_2 block_hide">
+        <i class="mp3_icon fa-solid fa-music"></i>
         <input type="text" placeholder="Enter your username">
         <input type="password" placeholder="Enter your password">
-        <p class="question-link">Haven't got accaunt ?</p>
-        <a class="register-link" href="#">Register</a>
+        <a class="register-link1" href="#">Login</a>
+        <div class="lg_link">
+            <p class="question-link">Haven't got accaunt ?</p>
+            <a class="register-link" href="#">Register</a>
+        </div>
     </div>
 
 </section>
