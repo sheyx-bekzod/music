@@ -54,17 +54,19 @@
 
 <section class="register register-none">
     <div class="resiger_block block_1">
-        <input type="text" placeholder="Enter your username">
-        <input type="email" placeholder="Enter your email">
-        <input type="password" placeholder="Enter your password">
-        <input type="password" placeholder="Confirm your password">
+        <input type="text" placeholder="Enter your username" id="reg_name">
+        <input type="email" placeholder="Enter your email" id="reg_email">
+        <input type="password" placeholder="Enter your password" id="reg_password">
+        <p class="msg" style="color: #fff"></p>
+        <input type="password" placeholder="Confirm your password" id="reg_confirm_password">
+        <p class="msg1" style="color: #fff"></p>
 
         <div class="status-password">
             <input type="checkbox">
             <label>Show password</label>
         </div>
-
-        <a style="text-align: center; color: #fff;" class="register-link1">Register</a>
+        <button class="submit"><a style="text-align: center; color: #fff;" class="register-link1" id="register_submit">Register</a>
+        </button>
 
         <p class="question-link">Yes accaunt ?</p>
         <a class="login-link" href="#">Login</a>
@@ -81,6 +83,8 @@
 {% block body %}
 
 {% endblock %}
-    <script src="../static/base.js"></script>
+<script src="../static/base.js"></script>
+<script src="../static/fetch.js"></script>
+
 </body>
 </html>
