@@ -28,8 +28,6 @@ body {
     min-height: 100vh;
 }
 
-/* loader */
-
 .preloader {
     display: flex;
     justify-content: center;
@@ -51,7 +49,6 @@ body {
     width: 500px;
 }
 
-/* loader end */
 
 ul {
     list-style: none;
@@ -164,21 +161,24 @@ a {
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 100vw;
     height: 650px;
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.396);
+    background-color: rgba(0, 0, 0, 0.56);
+    z-index: 10;
+    backdrop-filter: blur(6px);
 }
 
 .resiger_block {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgba(18, 17, 17, 0.597);
+    background-color: rgba(0, 0, 0, 0.68);
     width: 500px;
     height: 500px;
+    box-shadow: 0 0 2px 0 #b311be;
+    position: relative;
 }
 
 .resiger_block input {
@@ -199,6 +199,63 @@ a {
     color: #8f1698;
 }
 
+
+.register-link1 {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 8px 20px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    border: 1px solid #fff;
+    margin: 0 auto 35px;
+    transition: .2s;
+    border-radius: 10px;
+}
+
+.register-link1:hover {
+    color: #b311be;
+    border: 1px solid #b311be;
+    box-shadow: 0 0 3px #b311be,
+    0 0 9px #b311be,
+    0 0 25px #b311be;
+    transition: .2s;
+}
+
+.lg_link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lg_link p, .lg_link a {
+    margin: 0;
+}
+
+.lg_link a {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.fa-eye {
+    font-size: 25px;
+    position: absolute;
+    right: 18px;
+}
+
+.fa-eye-slash {
+    font-size: 25px;
+    position: absolute;
+    right: 17px;
+}
+
+.fa-eye:hover, .fa-eye-slash:hover {
+    color: #b311be;
+}
+
 .status-password {
     display: flex;
     justify-content: center;
@@ -214,11 +271,6 @@ a {
     color: #fff;
 }
 
-.register-link {
-    border-bottom: 2px solid #8f1698;
-    padding: 20px;
-}
-
 .question-link {
     text-align: center;
     color: #fff;
@@ -229,6 +281,18 @@ a {
     color: #fff;
     margin-bottom: 10px;
 
+}
+
+.mp3_icon {
+    position: absolute;
+    top: 30px;
+    left: 45%;
+    font-size: 60px;
+    cursor: auto;
+}
+
+.mp3_icon:hover {
+    color: #b311be;
 }
 
 .register-link {
@@ -443,7 +507,6 @@ ul {
 }
 
 
-
 .music_list_ul {
     width: 95%;
     height: 0;
@@ -524,7 +587,6 @@ ul {
 /* Singer info section end */
 
 
-
 .music_control {
     width: 100%;
     height: 60.5px;
@@ -597,7 +659,7 @@ ul {
     border: 3px #fff solid;
 }
 
-.singer-box:hover:singer-box img {
+.singer-box:hover .singer-box img {
     position: relative;
     top: 200%;
     transition: ease-in 0.5s;
@@ -847,7 +909,6 @@ ul {
 }
 
 
-
 .user_musics::-webkit-scrollbar {
     width: 10px;
     cursor: pointer;
@@ -973,7 +1034,6 @@ ul {
 }
 
 
-
 .add_music_information::-webkit-scrollbar {
     width: 10px;
     cursor: pointer;
@@ -1003,6 +1063,7 @@ ul {
 .fa-file-audio {
     font-size: 85px;
 }
+
 .fa-file-audio:hover {
     color: #b311be;
 }

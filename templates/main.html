@@ -56,31 +56,31 @@
     <div class="resiger_block block_1">
         <input type="text" placeholder="Enter your username">
         <input type="email" placeholder="Enter your email">
-        <input type="password" placeholder="Enter your password">
+        <input class="reg_ps" type="password" placeholder="Enter your password">
         <input type="password" placeholder="Confirm your password">
-
-        <div class="status-password">
-            <input type="checkbox">
-            <label>Show password</label>
+        <i class="fa-solid fa-eye"></i>
+        <a class="register-link1" href="#">Register</a>
+        <div class="lg_link">
+            <p class="question-link">Yes accaunt ?</p>
+            <a class="login-link" href="#">Login</a>
         </div>
-
-        <a style="text-align: center; color: #fff;" class="register-link1">Register</a>
-
-        <p class="question-link">Yes accaunt ?</p>
-        <a class="login-link" href="#">Login</a>
     </div>
 
     <div class="resiger_block block_2 block_hide">
+        <i class="mp3_icon fa-solid fa-music"></i>
         <input type="text" placeholder="Enter your username">
         <input type="password" placeholder="Enter your password">
-        <p class="question-link">Haven't got accaunt ?</p>
-        <a class="register-link" href="#">Register</a>
+        <a class="register-link1" href="#">Login</a>
+        <div class="lg_link">
+            <p class="question-link">Haven't got accaunt ?</p>
+            <a class="register-link" href="#">Register</a>
+        </div>
     </div>
 
 </section>
 {% block body %}
 
 {% endblock %}
-    <script src="../static/base.js"></script>
+<script src="../static/base.js"></script>
 </body>
 </html>
