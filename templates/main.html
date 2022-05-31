@@ -44,7 +44,7 @@
             <ul class="nav-list">
                 <li>favaurte</li>
                 <i class="fa fa-star"></i>
-                <li><a href="#" style="color: #fff;" class="login">Login</a></li>
+                <li><a href="#" class="login">Login</a></li>
                 <i class="fa-solid fa-arrow-right-to-bracket"></i>
             </ul>
         </nav>
@@ -54,27 +54,19 @@
 
 <section class="register register-none">
     <div class="resiger_block block_1">
-        {#
-{#        <p class="msg1" style="color: #fff"></p>#}
-        {##}
-        {#        <div class="status-password">#}
-        {#            <input type="checkbox">#}
-        {#            <label>Show password</label>#}
-        {#        </div>#}
-        {#        <button class="submit"><a style="text-align: center; color: #fff;" class="register-link1" id="register_submit">Register</a>#}
-        {#        </button>#}
-
-        <input type="text" placeholder="Enter your username" id="reg_name">#}
+        <input type="text" placeholder="Enter your username" id="reg_name">
         <input type="email" placeholder="Enter your email" id="reg_email">
         <input type="password" placeholder="Enter your password" id="reg_password">
         <p class="msg" style="color: #fff"></p>
+
         <input type="password" placeholder="Confirm your password" id="reg_confirm_password">
-        <p class="msg1" style="color: #fff"></p>
         <i class="fa-solid fa-eye"></i>
-        <button id="submit"><a class="register-link1 submit"  href="#">Register</a></button>
+        <p class="msg1" style="color: #fff"></p>
+
+        <button class="register-link1" id="submit"><a class="submit" href="#">Register</a></button>
         <div class="lg_link">
             <p class="question-link">Yes accaunt ?</p>
-            <a class="login-link" href="#" >Login</a>
+            <a class="login-link" href="#">Login</a>
         </div>
     </div>
 

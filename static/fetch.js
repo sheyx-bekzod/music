@@ -3,6 +3,7 @@ const name = document.querySelector('#reg_name'),
     reg_email = document.querySelector('#reg_email'),
     reg_password = document.querySelector('#reg_password'),
     reg_confirm_password = document.querySelector('#reg_confirm_password'),
+    sb = document.querySelector('.submit'),
     sumbitBtn = document.querySelector("#submit");
 console.log(sumbitBtn)
 
@@ -10,7 +11,7 @@ console.log(sumbitBtn)
 const elem = document.querySelector('.msg')
 console.log(elem)
 
-reg_password.addEventListener("change", () => {
+reg_password.addEventListener("input", () => {
     // console.log(reg_password.length)
     if (reg_password.value.length < 8) {
         elem.innerHTML = ""
@@ -25,25 +26,17 @@ reg_password.addEventListener("change", () => {
 
 const elem1 = document.querySelector('.msg1')
 
-reg_confirm_password.addEventListener("change", () => {
-    if (reg_confirm_password.value.length < 8) {
-        elem1.innerHTML = ""
-        elem1.innerHTML = "password length must be order 8"
-        console.log('password length must be order 8')
-        sumbitBtn.disabled = true
-
-    } else {
-        elem1.innerHTML = ""
-        sumbitBtn.disabled = false
+reg_confirm_password.addEventListener("input", () => {
         if (reg_password.value !== reg_confirm_password.value) {
             elem1.innerHTML = ""
             elem1.innerHTML = "Confirm password do not match"
             sumbitBtn.disabled = true
         } else {
             elem1.innerHTML = ""
+            sumbitBtn.style.cssText = "cursor: not-allowed"
             sumbitBtn.disabled = false
         }
-    }
+
 })
 
 sumbitBtn.addEventListener("click", sendRequest)

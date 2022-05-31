@@ -80,7 +80,7 @@ a {
 
 .logo h1 {
     color: #fff;
-    font-size: 25px;
+    font-size: 20px;
     margin: 0;
 }
 
@@ -92,7 +92,7 @@ a {
 
 .logo i {
     color: #8f1698;
-    font-size: 25px;
+    font-size: 20px;
     margin-left: 20px;
 }
 
@@ -104,7 +104,9 @@ a {
     color: #fff;
     border-left: 5px solid #b311be;
 }
-
+.search input::placeholder {
+    color: #fff;
+}
 .search i {
     color: #8f1698;
     margin-left: 10px;
@@ -131,24 +133,30 @@ a {
     align-items: center;
     cursor: pointer;
 }
+.login {
+    color: #fff;
+    font-size: 16px;
+}
+.login:hover {
+    color: #fff;
+}
 
 
 .nav-list {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
 }
 
 .nav-list li {
     color: #fff;
     list-style-type: none;
-    font-size: 20px;
+    font-size: 18px;
+    margin: 0;
 }
 
 .nav-list i {
     font-size: 25px;
-    color: #fff;
     margin-left: 15px;
     color: #8f1698;
     margin-right: 20px;
@@ -164,14 +172,9 @@ a {
     position: fixed;
     top: 0;
     left: 0;
-<<<<<<< HEAD
-    background-color: rgba(0, 0, 0, 0.396);
-    z-index: 1;
-=======
     background-color: rgba(0, 0, 0, 0.56);
     z-index: 10;
     backdrop-filter: blur(6px);
->>>>>>> 0f0de4dd524a74cc441f1c809f8853fd265191b5
 }
 
 .resiger_block {
@@ -190,7 +193,7 @@ a {
     border: none;
     background: none;
     border-bottom: 2px solid #8f1698;
-    margin: 20px 20px;
+    margin: 12px 22px;
     height: 50px;
     color: #fff;
 }
@@ -205,6 +208,8 @@ a {
 
 
 .register-link1 {
+    outline: none;
+    background: none;
     position: relative;
     display: block;
     overflow: hidden;
@@ -213,7 +218,7 @@ a {
     text-transform: uppercase;
     letter-spacing: 4px;
     border: 1px solid #fff;
-    margin: 0 auto 35px;
+    margin: 0 auto 40px;
     transition: .2s;
     border-radius: 10px;
 }
@@ -225,6 +230,14 @@ a {
     0 0 9px #b311be,
     0 0 25px #b311be;
     transition: .2s;
+}
+
+.register-link1 a {
+    color: #fff;
+}
+
+.register-link1:hover .submit {
+    color: #b311be;
 }
 
 .lg_link {
@@ -248,12 +261,14 @@ a {
     font-size: 25px;
     position: absolute;
     right: 18px;
+    margin-bottom: 50px;
 }
 
 .fa-eye-slash {
     font-size: 25px;
     position: absolute;
     right: 17px;
+    margin-bottom: 50px;
 }
 
 .fa-eye:hover, .fa-eye-slash:hover {
