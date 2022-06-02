@@ -859,10 +859,22 @@ ul {
     flex-wrap: wrap;
 }
 
+/*.artist_albums {*/
+/*    height: 230px;*/
+/*    width: 230px;*/
+/*    border: 2px solid #fff;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    position: relative;*/
+/*    overflow: hidden;*/
+/*    margin: 0 0 0 100px;*/
+/*}*/
+
 .artist_albums {
     height: 230px;
     width: 230px;
-    border: 2px solid #fff;
+    border: 2px  solid #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -874,6 +886,7 @@ ul {
 .artist_albums img {
     height: 230px;
     width: 230px;
+    cursor: pointer;
 }
 
 .home_music_album_hv {
@@ -885,7 +898,6 @@ ul {
     position: absolute;
     left: 0;
     top: -300px;
-    transition: .2s ease-in-out;
     /* border: 2px solid #fff; */
     display: flex;
     flex-direction: column;
@@ -1095,4 +1107,7 @@ ul {
     background: none;
     padding: 5px 2px;
     color: #fff;
+}
+.br_bottom {
+    margin-bottom: 50px;
 }

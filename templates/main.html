@@ -14,8 +14,6 @@
           integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="../static/css/main.css">
-    <link rel="stylesheet" href="../static/css/main.css">
-    <link rel="stylesheet" href="static/css/main.css">
     <title>{% block title %} {% endblock %}</title>
 </head>
 <body>
@@ -54,8 +52,11 @@
 
 <section class="register register-none">
     <div class="resiger_block block_1">
+
         <input type="text" placeholder="Enter your username" id="reg_name">
+        <p class="name-info"></p>
         <input type="email" placeholder="Enter your email" id="reg_email">
+        <p class="email-info"></p>
         <input type="password" placeholder="Enter your password" id="reg_password">
         <p class="msg" style="color: #fff"></p>
 
@@ -73,7 +74,7 @@
     <div class="resiger_block block_2 block_hide">
         <i class="mp3_icon fa-solid fa-music"></i>
         <input type="text" placeholder="Enter your username">
-        <input type="password" placeholder="Enter your password">
+        <input class="br_bottom" type="password" placeholder="Enter your password">
         <a class="register-link1" href="#">Login</a>
         <div class="lg_link">
             <p class="question-link">Haven't got accaunt ?</p>

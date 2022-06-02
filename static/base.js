@@ -16,7 +16,6 @@ window.addEventListener('load', () => {
     const ps_value = document.querySelector('.fa-eye');
     const ps_input = document.querySelector('.reg_ps');
 
-    console.log(ps_input)
 
     if (login) {
         login.addEventListener("click", openModal)
@@ -59,9 +58,9 @@ window.addEventListener('load', () => {
     ps_value.addEventListener('click', () => {
         ps_value.classList.toggle('fa-eye-slash');
         ps_value.classList.toggle('fa-eye');
-        if (ps_input.type === "password"){
+        if (ps_input.type === "password") {
             ps_input.type = "text"
-        }else {
+        } else {
             ps_input.type = "password"
         }
     })
@@ -356,16 +355,19 @@ window.addEventListener('load', () => {
     addLink();
 
     let again = false;
-    share.addEventListener("click", () => {
-        share.classList.toggle('fa-rotate')
-        share.classList.toggle('fa-share')
-        if (!again) {
-            again = true
-        } else {
-            again = false
-        }
-        console.log(again);
-    })
+    if (share) {
+        share.addEventListener("click", () => {
+            share.classList.toggle('fa-rotate')
+            share.classList.toggle('fa-share')
+            if (!again) {
+                again = true
+            } else {
+                again = false
+            }
+            console.log(again);
+        })
+
+    }
 
 
 })
