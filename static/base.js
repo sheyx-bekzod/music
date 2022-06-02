@@ -99,7 +99,7 @@ window.addEventListener('load', () => {
     }
 
     const typeMusic = document.querySelectorAll(".song_type h2"),
-        activeIcon = document.querySelectorAll('.song_type i'),
+        activeIcon = document.querySelectorAll('.fa-chevron-up'),
         popularMusicList = document.querySelectorAll('.popular_music_list')
 
     typeMusic.forEach((item, index) => {
@@ -129,12 +129,12 @@ window.addEventListener('load', () => {
 
 
     function closeInfo(index) {
-        activeIcon[index].classList.remove("fa-angle-down")
+        activeIcon[index].classList.toggle("fa-angle-down")
         popularMusicList[index].style.display = "none"
     }
 
     function openInfo(index) {
-        activeIcon[index].classList.add("fa-angle-down")
+        activeIcon[index].classList.toggle("fa-angle-down")
         popularMusicList[index].style.display = "block"
     }
 
