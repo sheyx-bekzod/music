@@ -104,9 +104,11 @@ a {
     color: #fff;
     border-left: 5px solid #b311be;
 }
+
 .search input::placeholder {
     color: #fff;
 }
+
 .search i {
     color: #8f1698;
     margin-left: 10px;
@@ -133,10 +135,12 @@ a {
     align-items: center;
     cursor: pointer;
 }
+
 .login {
     color: #fff;
     font-size: 16px;
 }
+
 .login:hover {
     color: #fff;
 }
@@ -218,7 +222,7 @@ a {
     text-transform: uppercase;
     letter-spacing: 4px;
     border: 1px solid #fff;
-    margin: 0 auto 40px;
+    margin: 30px auto 40px;
     transition: .2s;
     border-radius: 10px;
 }
@@ -261,14 +265,14 @@ a {
     font-size: 25px;
     position: absolute;
     right: 18px;
-    margin-bottom: 50px;
+    margin-bottom: 15px;
 }
 
 .fa-eye-slash {
     font-size: 25px;
     position: absolute;
-    right: 17px;
-    margin-bottom: 50px;
+    right: 16px;
+    margin-bottom: 15px;
 }
 
 .fa-eye:hover, .fa-eye-slash:hover {
@@ -317,7 +321,6 @@ a {
 .register-link {
     text-align: center;
     color: #fff;
-    margin-bottom: 10px;
 }
 
 .register-none {
@@ -874,7 +877,7 @@ ul {
 .artist_albums {
     height: 230px;
     width: 230px;
-    border: 2px  solid #fff;
+    border: 2px solid #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1108,6 +1111,25 @@ ul {
     padding: 5px 2px;
     color: #fff;
 }
+
 .br_bottom {
     margin-bottom: 50px;
+}
+
+.msg {
+    position: absolute;
+    color: #ff0000;
+    font-family: system-ui;
+    font-size: 13px;
+    bottom: 205px;
+    left: 25px;
+}
+
+.msg1 {
+    color: #ff0000;
+    font-family: system-ui;
+    font-size: 13px;
+    position: absolute;
+    bottom: 130px;
+    left: 25px;
 }

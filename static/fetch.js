@@ -38,7 +38,6 @@ reg_email.addEventListener("change", () => {
 
 
 reg_password.addEventListener("input", () => {
-    // console.log(reg_password.length)
     if (reg_password.value.length < 8) {
         elem.innerHTML = ""
         elem.innerHTML = "password length must be order 8 "
@@ -93,3 +92,17 @@ function sendRequest() {
         .then(res => res.json())
         .then(res => console.log(res))
 }
+
+
+const ps_value = document.querySelector('.fa-eye');
+const ps_input = document.querySelector('.reg_ps');
+
+ps_value.addEventListener('click', () => {
+    ps_value.classList.toggle('fa-eye');
+    ps_value.classList.toggle('fa-eye-slash');
+    if (ps_input.type === "password") {
+        ps_input.type = "text"
+    } else {
+        ps_input.type = "password"
+    }
+})

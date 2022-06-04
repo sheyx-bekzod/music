@@ -13,9 +13,6 @@ window.addEventListener('load', () => {
     const block2 = document.querySelector('.block_2')
     const block1 = document.querySelector('.block_1')
 
-    const ps_value = document.querySelector('.fa-eye');
-    const ps_input = document.querySelector('.reg_ps');
-
 
     if (login) {
         login.addEventListener("click", openModal)
@@ -54,16 +51,6 @@ window.addEventListener('load', () => {
         loginLink.addEventListener("click", openLogin)
         registerlink.addEventListener("click", openRegister)
     }
-
-    ps_value.addEventListener('click', () => {
-        ps_value.classList.toggle('fa-eye-slash');
-        ps_value.classList.toggle('fa-eye');
-        if (ps_input.type === "password") {
-            ps_input.type = "text"
-        } else {
-            ps_input.type = "password"
-        }
-    })
 
 
     const wrapper = document.querySelector('.wrapper'),
