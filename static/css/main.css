@@ -265,14 +265,14 @@ a {
     font-size: 25px;
     position: absolute;
     right: 18px;
-    margin-bottom: 15px;
+    margin-bottom: 45px;
 }
 
 .fa-eye-slash {
     font-size: 25px;
     position: absolute;
     right: 16px;
-    margin-bottom: 15px;
+    margin-bottom: 45px;
 }
 
 .fa-eye:hover, .fa-eye-slash:hover {
@@ -847,7 +847,7 @@ ul {
 }
 
 
-.container_box {
+._box {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -861,18 +861,6 @@ ul {
     z-index: -1;
     flex-wrap: wrap;
 }
-
-/*.artist_albums {*/
-/*    height: 230px;*/
-/*    width: 230px;*/
-/*    border: 2px solid #fff;*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*    position: relative;*/
-/*    overflow: hidden;*/
-/*    margin: 0 0 0 100px;*/
-/*}*/
 
 .artist_albums {
     height: 230px;
@@ -909,7 +897,7 @@ ul {
     transition: .3s ease-in;
 }
 
-.artist_albums:hover .home_music_album_hv {
+.artist_albums:hover.home_music_album_hv {
     top: 0;
     transition: .3s ease-in;
 }
@@ -1116,20 +1104,88 @@ ul {
     margin-bottom: 50px;
 }
 
+.name-info,
+.email-info,
+.msg1,
 .msg {
-    position: absolute;
     color: #ff0000;
     font-family: system-ui;
     font-size: 13px;
-    bottom: 205px;
-    left: 25px;
+    position: absolute;
+    left: 22px;
+}
+
+.name-info {
+    top: 93px;
+}
+
+.email-info {
+    top: 167px;
+}
+
+.msg {
+    margin-top: 20px;
 }
 
 .msg1 {
-    color: #ff0000;
-    font-family: system-ui;
-    font-size: 13px;
-    position: absolute;
-    bottom: 130px;
-    left: 25px;
+    bottom: 150px;
 }
+
+
+
+.music_category a {
+    color: #fff;
+    background: #b311be;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 5px 35px;
+    margin: 0;
+}
+
+.add_music_category {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.67);
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.border_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+    width: 220px;
+    background: rgba(0, 0, 0, 0.8);
+    border-bottom: 3px solid #fff;
+}
+
+.border_box input {
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 1px solid #b311be;
+    padding: 4px;
+}
+
+.border_box input::placeholder {
+    color: white;
+}
+
+.border_box a {
+    color: #fff;
+    border-bottom: 1px solid #b311be;
+    padding: 5px 20px;
+}
+
+.add_music_category {
+    display: none;
+}
+

@@ -12,11 +12,10 @@ const elem = document.querySelector('.msg')
 
 
 name.addEventListener("change", () => {
-    if (name.value.length < 2) {
+    if (name.value.length < 3) {
         nameInfo.innerHTML = ""
-        nameInfo.innerHTML = "password length must be order 2 "
+        nameInfo.innerHTML = "name length must be order 3 "
         sumbitBtn.disabled = true
-        console.log('password length must be order 2')
     } else {
         nameInfo.innerHTML = ""
         sumbitBtn.disabled = false
@@ -27,9 +26,8 @@ name.addEventListener("change", () => {
 reg_email.addEventListener("change", () => {
     if (reg_email.value.length < 5) {
         emailInfo.innerHTML = ""
-        emailInfo.innerHTML = "password length must be order 5 "
+        emailInfo.innerHTML = "e-mail length must be order 5 "
         sumbitBtn.disabled = true
-        console.log('password length must be order 5')
     } else {
         emailInfo.innerHTML = ""
         sumbitBtn.disabled = false

@@ -10,8 +10,8 @@ window.addEventListener('load', () => {
     const loginLink = document.querySelector('.login-link')
     const registerlink = document.querySelector('.register-link')
 
-    const block2 = document.querySelector('.block_2')
     const block1 = document.querySelector('.block_1')
+    const block2 = document.querySelector('.block_2')
 
 
     if (login) {
@@ -355,6 +355,15 @@ window.addEventListener('load', () => {
         })
 
     }
+
+
+    const music_category = document.querySelector('.music_category_a'),
+        category_input = document.querySelector('.add_music_category');
+
+
+    music_category.addEventListener('click', () => {
+       category_input.style.display = "flex"
+    });
 
 
 })
