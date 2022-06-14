@@ -346,12 +346,7 @@ window.addEventListener('load', () => {
         share.addEventListener("click", () => {
             share.classList.toggle('fa-rotate')
             share.classList.toggle('fa-share')
-            if (!again) {
-                again = true
-            } else {
-                again = false
-            }
-            console.log(again);
+            again = !again;
         })
 
     }
@@ -362,7 +357,7 @@ window.addEventListener('load', () => {
 
 
     music_category.addEventListener('click', () => {
-       category_input.style.display = "flex"
+        category_input.style.display = "flex"
     });
 
 
