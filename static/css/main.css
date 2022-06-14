@@ -851,6 +851,7 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: -1;
 }
 
 .home_music_album {
@@ -858,7 +859,6 @@ ul {
     width: 83%;
     padding: 15px 1rem;
     display: flex;
-    z-index: -1;
     flex-wrap: wrap;
 }
 
@@ -897,7 +897,7 @@ ul {
     transition: .3s ease-in;
 }
 
-.artist_albums:hover.home_music_album_hv {
+.artist_albums:hover .home_music_album_hv {
     top: 0;
     transition: .3s ease-in;
 }
@@ -1130,7 +1130,6 @@ ul {
 .msg1 {
     bottom: 150px;
 }
-
 
 
 .music_category a {
